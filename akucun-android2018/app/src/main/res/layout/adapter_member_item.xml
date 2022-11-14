@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_comment_selector">
+
+    <RelativeLayout
+        android:id="@+id/member_option"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/space_10"
+        android:layout_marginRight="@dimen/space_10"
+        android:background="@drawable/b_vip_choose_bg"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/member_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one_year_membership"
+            android:textColor="@color/text_dark"
+            android:paddingLeft="@dimen/space_10"
+            android:paddingTop="@dimen/space_15"
+            android:textSize="@dimen/text_size_normal_l"/>
+
+        <TextView
+            android:id="@+id/member_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/valid_for_one_year"
+            android:textColor="@color/gray"
+            android:layout_below="@id/member_name"
+            android:paddingLeft="@dimen/space_10"
+            android:paddingTop="@dimen/space_10"
+            android:paddingBottom="@dimen/space_15"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:id="@+id/member_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥998"
+            android:textColor="@color/color_accent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/space_20"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_big"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/choosed"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

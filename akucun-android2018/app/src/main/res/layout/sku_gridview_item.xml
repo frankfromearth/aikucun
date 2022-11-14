@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/skuLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="0dp">
+
+    <TextView
+        android:id="@+id/skuText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/space_3"
+        android:textColor="@color/selector_sku_text"
+        android:textSize="@dimen/text_size_small" />
+
+</LinearLayout>

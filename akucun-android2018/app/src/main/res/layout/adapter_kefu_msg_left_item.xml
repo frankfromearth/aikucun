@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/icon_message"
+        android:layout_width="@dimen/space_40"
+        android:layout_height="@dimen/space_40"
+        android:layout_marginRight="@dimen/space_5"
+        android:scaleType="fitCenter"
+        android:background="@drawable/kefu_header_bg"
+        android:src="@drawable/ic_round_launcher"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tt_other_image_vertical_bk"
+        android:layout_toRightOf="@+id/icon_message">
+
+        <TextView
+            android:id="@+id/msg_content_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="neiron"
+            android:padding="@dimen/space_4"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/text_size_normal"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jxccp.ui.widget.JXCheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="6dp"
+    android:background="@color/chat_bg"
+    android:paddingBottom="6dp" >
+
+    <TextView
+        android:id="@+id/tv_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/jx_chat_tips_bg"
+        android:paddingBottom="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="2dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_12sp"
+        android:visibility="gone"/>
+
+    <com.jxccp.ui.widget.JXCircleImageView
+        android:id="@+id/iv_photo"
+        android:layout_below="@id/tv_timestamp"
+        android:layout_width="@dimen/default_item_image"
+        android:layout_height="@dimen/default_item_image"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:duplicateParentState="true"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_timestamp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@id/iv_photo"
+        android:background="@drawable/jx_bg_send_message_container"
+        android:gravity="left|center"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:lineSpacingExtra="2dp"
+        android:textColor="#2c2c2c"
+        android:paddingLeft="8dp"
+        android:paddingRight="15dp"
+        android:maxWidth="203dp"
+        android:textSize="@dimen/font_size_small" />
+
+    <CheckBox
+        android:id="@+id/cb_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_photo"
+        android:duplicateParentState="true"
+        android:layout_marginTop="4dp"
+        android:focusable="false"
+        android:clickable="false"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_send_failed"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/tv_timestamp"
+        android:layout_toLeftOf="@id/tv_message"
+        android:src="@drawable/jx_ic_send_failed"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pb_sending"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/tv_timestamp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@id/tv_message"
+        android:visibility="gone" />
+</com.jxccp.ui.widget.JXCheckableRelativeLayout>

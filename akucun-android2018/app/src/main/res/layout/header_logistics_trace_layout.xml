@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_light"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/space_10">
+
+            <com.aikucun.akapp.widget.ColorFilterImageView
+                android:id="@+id/headImage"
+                android:layout_width="@dimen/space_45"
+                android:layout_height="@dimen/space_45"
+                android:layout_marginRight="@dimen/global_padding"
+                android:layout_marginTop="@dimen/space_5"
+                android:background="@drawable/btn_image_corner"
+                android:padding="@dimen/space_1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_default_image" />
+
+            <TextView
+                android:id="@+id/brand_name_tv"
+                style="@style/option_item_text_title"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/headImage" />
+
+            <TextView
+                android:id="@+id/total_count_tv"
+                style="@style/option_item_text_title"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_10">
+
+            <TextView
+                style="@style/option_item_text_title"
+                android:text="@string/delivery_no" />
+
+            <TextView
+                android:id="@+id/delivery_no_tv"
+                style="@style/option_item_text_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/space_10"
+            android:paddingLeft="@dimen/space_10">
+
+            <TextView
+                style="@style/option_item_text_title"
+                android:text="@string/delivery_time" />
+
+            <TextView
+                android:id="@+id/delivery_time_tv"
+                style="@style/option_item_text_title" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_10">
+
+            <TextView
+                android:id="@+id/tv0"
+                style="@style/option_item_text_title"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="@string/logistics_no" />
+
+            <TextView
+                android:id="@+id/logistics_no_tv"
+                style="@style/option_item_text_title"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/tv0" />
+
+            <TextView
+                android:id="@+id/copay_order_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_border_black_bg"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/space_10"
+                android:paddingTop="5dp"
+
+                android:text="@string/copy_order_num"
+                android:textColor="@color/selector_normal_text"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/space_10"
+            android:paddingLeft="@dimen/space_10">
+
+            <TextView
+                style="@style/option_item_text_title"
+                android:text="@string/logistics_company" />
+
+            <TextView
+                android:id="@+id/logistics_company_tv"
+                style="@style/option_item_text_title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/color_bg_light" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

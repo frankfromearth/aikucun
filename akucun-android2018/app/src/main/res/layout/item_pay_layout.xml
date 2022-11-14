@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_select_bg"
+        android:padding="@dimen/space_10">
+
+        <ImageView
+            android:id="@+id/icon_pay_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_alipay" />
+
+        <ImageView
+            android:id="@+id/icon_right_iv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:src="@drawable/dir_choose" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/icon_right_iv"
+            android:layout_toRightOf="@id/icon_pay_logo"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/pay_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_normal_l"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pay_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_small" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/layout_division_view" />
+
+
+</LinearLayout>

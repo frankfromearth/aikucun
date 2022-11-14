@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/view_layout"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tab_icon"
+            android:layout_width="@dimen/space_20"
+            android:layout_height="@dimen/space_20"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_home" />
+
+        <!--
+            <com.aikucun.akapp.widget.ECTextView
+                android:id="@+id/tab_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/selector_tabbar_text"
+                android:textSize="@dimen/text_size_icon"
+                app:fontFamily="material"
+                app:textIcon="\uE8E7"/>
+        -->
+
+        <TextView
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/selector_tabbar_text"
+            android:textSize="@dimen/text_size_tab" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/unread_count"
+        android:layout_toRightOf="@id/view_layout"
+        android:layout_marginLeft="-10dp"
+        style="@style/unread_msg_bg"/>
+
+    <ImageView
+        android:id="@+id/unread_count_discover"
+        android:layout_toRightOf="@id/view_layout"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="-8dp"
+        android:src="@drawable/ic_red_point"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_light"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/color_tab_line" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_bg_header">
+
+        <TextView
+            android:id="@+id/buyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_45"
+            android:layout_alignParentRight="true"
+            android:background="@color/color_accent"
+            android:gravity="center"
+            android:text="@string/inviation_now"
+            android:textStyle="bold"
+            android:textColor="@color/selector_white_dark_text"
+            android:textSize="@dimen/text_size_button" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/rl_tip">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_invite_awards" />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/play_video_iv"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="25dp"
+                    android:layout_marginLeft="@dimen/space_25"
+                    android:layout_marginBottom="@dimen/space_15"
+                    android:src="@drawable/icon_play"
+                    android:layout_height="25dp" />
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/detailed_rules_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/detailed_rules_text"
+                        style="@style/option_item_text_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detailed_rules"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:background="@color/white"
+                        style="@style/h_line"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/invitations_approved_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/invitations_approved"
+                    android:textColor="@color/color_accent" />
+
+                <LinearLayout
+                    android:id="@+id/invit_approved_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:padding="10dp" />
+                <TextView
+                    android:id="@+id/no_members_text"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    style="@style/option_item_text_title"
+                    android:text="@string/no_invitations_approved"
+                    android:gravity="center"
+                    android:padding="@dimen/space_10"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/member_count_text"
+                    style="@style/option_item_text_title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/invited_members" />
+
+                <LinearLayout
+                    android:id="@+id/go_to_my_team_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/option_item_text_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/into_my_team"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_normal_s" />
+
+                    <View
+                        style="@style/h_line"
+                        android:background="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/team_rebate_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="¥"
+                            android:textColor="@color/gray"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/paid_reward_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/gray"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/option_item_text_title"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/paid_reward"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="¥"
+                            android:textColor="@color/color_accent"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/haved_reward_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/color_accent"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/option_item_text_title"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:gravity="center"
+                        android:text="@string/haved_reward"
+                        android:textColor="@color/color_accent" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

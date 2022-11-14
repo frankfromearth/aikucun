@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.jxccp.ui.widget.JXFlexibleRatingBar
+        android:id="@+id/rb_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" 
+        android:stepSize="1"/>
+
+    <TextView
+        android:id="@+id/tv_rate_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rb_rate"
+        android:layout_below="@+id/rb_rate"
+        android:layout_marginBottom="20dp" 
+        android:layout_marginLeft="10dp"/>
+
+</RelativeLayout>

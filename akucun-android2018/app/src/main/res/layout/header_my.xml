@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/global_padding">
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="@dimen/space_60"
+            android:layout_height="@dimen/space_60"
+            android:layout_marginRight="@dimen/global_padding"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/user_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/user_image"
+            android:layout_toRightOf="@id/user_image"
+            android:text="@string/nick_name"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/user_weixin_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/user_image"
+            android:layout_alignLeft="@id/user_name_text"
+            android:text="@string/wechat_no"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/user_mobile_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/user_name_text"
+            android:layout_centerVertical="true"
+            android:text="@string/phone_num"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal" />
+
+    </RelativeLayout>
+
+    <View style="@style/h_line" />
+
+    <View
+        style="@style/h_line"
+        android:layout_marginTop="@dimen/space_20" />
+
+    <include
+        layout="@layout/layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@color/color_bg_header"
+        android:paddingLeft="@dimen/global_padding"
+        android:paddingTop="@dimen/space_6"
+        android:paddingBottom="@dimen/space_6"
+        android:text="@string/my_orders"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_normal" />
+
+</LinearLayout>
+
+

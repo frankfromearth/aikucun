@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_light">
+
+    <com.aikucun.akapp.widget.PullScrollView
+        android:id="@+id/pull_scrllview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dip">
+
+            <TextView
+                android:id="@+id/update_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/updating_user_info"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/user_account_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_select_bg"
+                    android:padding="@dimen/global_padding">
+
+                    <com.aikucun.akapp.widget.RoundImageView
+                        android:id="@+id/head_image"
+                        android:layout_width="@dimen/space_45"
+                        android:layout_height="@dimen/space_45"
+                        android:layout_marginRight="@dimen/global_padding"
+                        android:src="@drawable/icon_default_avatar" />
+
+                    <TextView
+                        android:id="@+id/user_name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/head_image"
+                        android:layout_toRightOf="@id/head_image"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/text_size_button" />
+
+                    <TextView
+                        android:id="@+id/user_vip_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/head_image"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:layout_toRightOf="@id/user_name_text"
+                        android:background="@drawable/b_vip_disable_bg"
+                        android:paddingLeft="@dimen/space_2"
+                        android:paddingRight="@dimen/space_2"
+                        android:text="VIP"
+                        android:textColor="@color/white"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/head_image"
+                        android:text="@string/vip_level_rule"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/purchasing_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/head_image"
+                        android:layout_alignLeft="@id/user_name_text"
+                        android:layout_marginTop="@dimen/space_15">
+
+                        <TextView
+                            android:id="@+id/user_weixin_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="@string/purchasing_number"
+                            android:textColor="@color/text_dark"
+                            android:textSize="@dimen/text_size_normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/purchasing_layout"
+                        android:layout_below="@id/purchasing_layout"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                                android:id="@+id/progress"
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginRight="10dp"
+                                app:rcBackgroundColor="@color/color_bg_light"
+                                app:rcBackgroundPadding="0dp"
+                                app:rcMax="100"
+                                app:rcProgress="50"
+                                app:rcProgressColor="@color/color_accent"
+                                app:rcRadius="5dp"
+                                app:rcReverse="false"
+                                app:rcSecondaryProgress="0"
+                                app:rcSecondaryProgressColor="@color/color_accent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="10dp"
+                                android:text="$8220"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_size_12sp" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="在销售$50000升级为VIP4"
+                            android:textColor="@color/text_dark"
+                            android:textSize="@dimen/text_size_normal" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <View
+                        style="@style/h_line"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp" />
+
+                    <include layout="@layout/layout_account_amount" />
+                </LinearLayout>
+
+                <View
+                    style="@style/h_line"
+                    android:layout_marginTop="@dimen/global_padding" />
+
+                <include
+                    layout="@layout/layout_myorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    style="@style/h_line"
+                    android:layout_marginTop="@dimen/global_padding" />
+
+                <include
+                    layout="@layout/layout_aftersale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/global_padding" />
+
+                <include layout="@layout/layout_my_bottom" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </com.aikucun.akapp.widget.PullScrollView>
+</RelativeLayout>

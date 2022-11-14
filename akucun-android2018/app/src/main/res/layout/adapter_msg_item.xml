@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="@dimen/global_padding">
+
+    <ImageView
+        android:id="@+id/icon_message"
+        android:layout_width="@dimen/space_30"
+        android:layout_height="@dimen/space_30"
+        android:layout_marginRight="@dimen/global_padding"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_msg_unread"/>
+
+    <TextView
+        android:id="@+id/msg_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/icon_message"
+        android:textColor="@color/text_link"
+        android:textSize="@dimen/text_size_normal_l"/>
+
+    <TextView
+        android:id="@+id/msg_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/text_normal"
+        android:textSize="@dimen/text_size_normal_s"/>
+
+    <TextView
+        android:id="@+id/msg_content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/msg_title_text"
+        android:layout_marginTop="@dimen/space_5"
+        android:layout_below="@id/msg_title_text"
+        android:textColor="@color/text_normal"
+        android:textSize="@dimen/text_size_normal"/>
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/top_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_select_bg"
+            android:gravity="center"
+            android:padding="10dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/space_16" />
+        <View
+            android:id="@+id/top_view"
+            android:background="@color/layout_division_view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <com.aikucun.akapp.widget.HalfScreenScrollView
+            android:id="@+id/scrollView"
+            android:fadingEdgeLength="50dp"
+            android:requiresFadingEdge="vertical"
+            android:fadingEdge="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" />
+        </com.aikucun.akapp.widget.HalfScreenScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#80aeaeae" />
+
+        <LinearLayout
+            android:id="@+id/cancel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_select_bg"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/cancel_layout_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/cancel"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

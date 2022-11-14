@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:paddingBottom="@dimen/space_8"
+        >
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/color_tab_line" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/refund_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/global_padding"
+                android:text="@string/order_refund_tip"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/global_padding"
+                android:paddingRight="@dimen/global_padding">
+
+                <TextView
+                    android:id="@+id/refund_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_refund_addr"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/addr_copy_btn"
+                    style="@style/button_small"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_bg_normal_border"
+                    android:text="@string/sale_copy_address"
+                    android:textColor="@color/selector_normal_text" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/reason_button"
+                style="@style/button_common"
+                android:layout_margin="@dimen/global_padding"
+                android:background="@drawable/btn_bg_normal_border"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/global_padding"
+                android:textColor="@color/color_accent" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/refund_wuliu_edit"
+                style="@style/edit_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/global_padding"
+                android:gravity="center_vertical"
+                android:hint="@string/sale_input_logistics_company_name"
+                android:imeActionLabel="Done"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/refund_bianhao_edit"
+                    style="@style/edit_common"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/global_padding"
+                    android:layout_marginRight="@dimen/global_padding"
+                    android:gravity="center_vertical"
+                    android:hint="@string/sale_input_express_number"
+                    android:imeActionLabel="Done"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="1" />
+
+                <ImageView
+                    android:id="@+id/iv_scan"
+                    android:layout_width="@dimen/space_30"
+                    android:layout_height="@dimen/space_30"
+                    android:padding="@dimen/space_5"
+                    android:layout_marginRight="@dimen/global_padding"
+                    android:src="@drawable/icon_scan"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/refund_product_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/global_padding">
+
+                    <com.aikucun.akapp.view.MultiImageView
+                        android:id="@+id/multiImagView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/contentTv"
+                        android:layout_toRightOf="@id/multiImagView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_8"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/text_size_normal" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/refund_product_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/global_padding"
+                    android:layout_marginRight="@dimen/global_padding"
+                    android:text="@string/choose_size_then_determine_the_replacement"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/text_size_normal_s" />
+
+                <com.aikucun.akapp.view.SkuGridView
+                    android:id="@+id/skuGridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/global_padding"
+                    android:layout_marginRight="@dimen/global_padding"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:background="@drawable/sku_bg"
+                    android:cacheColorHint="#00000000"
+                    android:horizontalSpacing="@dimen/space_10"
+                    android:listSelector="#00000000"
+                    android:numColumns="auto_fit"
+                    android:padding="@dimen/space_10"
+                    android:scrollbars="none"
+                    android:verticalSpacing="@dimen/space_10" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/ok_button"
+                style="@style/button_common"
+                android:layout_marginBottom="@dimen/space_40"
+                android:layout_marginLeft="@dimen/space_20"
+                android:layout_marginRight="@dimen/space_20"
+                android:layout_marginTop="@dimen/space_40"
+                android:background="@drawable/btn_bg_red_selector"
+                android:text="@string/sale_sure" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

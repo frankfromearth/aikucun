@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/msg_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginLeft="@dimen/space_10"
+        android:layout_marginRight="@dimen/space_10"
+        android:text="A_18668431086(07558)"
+        android:textSize="@dimen/text_size_normal_l"/>
+
+    <TextView
+        android:id="@+id/msg_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_normal"
+        android:layout_margin="@dimen/space_10"
+        android:text="2017-10-25 23:18:04"
+        android:textSize="@dimen/text_size_normal_s"/>
+
+    <TextView
+        android:id="@+id/msg_content_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="@string/open_membership"
+        android:background="@color/color_accent"
+        android:textSize="@dimen/text_size_normal_l"/>
+
+</LinearLayout>

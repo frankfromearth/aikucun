@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_myinfo_changeaddress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/option_item"
+            android:gravity="center_horizontal"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/option_item_text_title"
+                android:text="@string/missing_complaint" />
+        </RelativeLayout>
+
+        <View
+            style="@style/h_line"
+            android:layout_height="@dimen/space_4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.aikucun.akapp.view.MultiImageView
+                android:id="@+id/multiImagView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_10"
+                    android:text="fodfjo"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_normal" />
+
+
+                <TextView
+                    android:id="@+id/tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_10"
+                    android:text="@string/goods_intro_copyed_can_parse"
+                    android:textColor="@color/color_accent"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_pinpai"
+            style="@style/option_item"
+            android:clickable="false">
+
+            <TextView
+                android:id="@+id/tv_pinpai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lou_fa_tips"
+
+                android:textColor="@color/color_accent"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/h_line"
+            android:layout_height="@dimen/space_10" />
+
+        <RelativeLayout
+            android:id="@+id/rl_forward_done"
+            style="@style/option_item"
+            android:gravity="center_horizontal">
+
+            <TextView
+                style="@style/option_item_text_title"
+                android:text="@string/sale_sure"
+                android:textColor="#de6441" />
+
+        </RelativeLayout>
+
+        <View style="@style/h_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_forward_cancel"
+            style="@style/option_item"
+            android:gravity="center_horizontal">
+
+            <TextView
+                style="@style/option_item_text_title"
+                android:text="@string/cancel_nbsp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

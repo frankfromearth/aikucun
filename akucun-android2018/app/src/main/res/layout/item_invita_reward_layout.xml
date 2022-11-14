@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_select_bg"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.aikucun.akapp.widget.RoundImageView
+                android:id="@+id/head_image"
+                android:layout_gravity="bottom"
+                android:layout_width="@dimen/space_30"
+                android:layout_height="@dimen/space_30"
+                android:src="@drawable/icon_default_avatar" />
+
+            <TextView
+                android:id="@+id/user_name_text"
+                style="@style/option_item_text_title"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="向三" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_gravity="bottom"
+                    style="@style/option_item_text_title"
+                    android:text="@string/inviation_reward_personal_contri"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/personal_contribution_amount_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="999999"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/color_accent"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="bottom"
+                style="@style/option_item_text_title"
+                android:layout_toLeftOf="@id/personal_contribution_amount_text"
+                android:text="@string/inviation_reward_team_contri"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/team_contribution_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="999999"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_accent"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_marginLeft="10dp" />
+
+
+</LinearLayout>

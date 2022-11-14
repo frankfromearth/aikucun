@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/color_tab_line" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_settings_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_address" />
+
+            <View
+                style="@style/h_line"
+                android:layout_marginTop="@dimen/global_padding" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!-- 商品金额 -->
+                <RelativeLayout
+                    android:id="@+id/order_amount"
+                    style="@style/option_item"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/order_title_amount"
+                        style="@style/option_item_text_title"
+                        android:text="@string/goods_amount" />
+
+                    <TextView
+                        android:id="@+id/order_value_amount"
+                        style="@style/option_item_text_value"
+                        android:text="¥ --" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/h_line"
+                    android:layout_marginLeft="@dimen/global_padding" />
+
+                <!-- 转发抵扣 -->
+                <RelativeLayout
+                    android:id="@+id/order_dikou"
+                    style="@style/option_item"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/order_title_dikou"
+                        style="@style/option_item_text_title"
+                        android:text="@string/youhui_tips" />
+
+                    <TextView
+                        android:id="@+id/order_value_dikou"
+                        style="@style/option_item_text_value"
+                        android:text="¥ --" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/h_line"
+                    android:layout_marginLeft="@dimen/space_15" />
+
+                <!-- 运费 -->
+                <RelativeLayout
+                    android:id="@+id/order_yunfei"
+                    style="@style/option_item"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/order_title_yunfei"
+                        style="@style/option_item_text_title"
+                        android:text="@string/freight" />
+
+                    <TextView
+                        android:id="@+id/order_value_yunfei"
+                        style="@style/option_item_text_value"
+                        android:text="¥ --" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/h_line"
+                    android:layout_marginLeft="@dimen/space_15" />
+
+                <!-- 应付金额 -->
+                <RelativeLayout
+                    android:id="@+id/order_total"
+                    style="@style/option_item"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/order_title_total"
+                        style="@style/option_item_text_title"
+                        android:text="@string/amount_payable"
+                        android:textSize="@dimen/text_size_normal_l"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/order_value_total"
+                        style="@style/option_item_text_value"
+                        android:text="¥ --"
+                        android:textSize="@dimen/text_size_normal_l"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <View style="@style/h_line" />
+            </LinearLayout>
+
+            <View
+                style="@style/h_line"
+                android:layout_marginTop="@dimen/space_20" />
+
+            <LinearLayout
+                android:id="@+id/pay_layout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/sure_pay_btn"
+                style="@style/button_common"
+                android:layout_marginLeft="@dimen/space_20"
+                android:layout_marginRight="@dimen/space_20"
+                android:layout_marginTop="@dimen/space_30"
+                android:layout_marginBottom="@dimen/space_30"
+                android:background="@drawable/btn_bg_red_selector"
+                android:text="@string/sure_pay"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

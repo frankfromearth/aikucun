@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_countdown"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:paddingLeft="@dimen/global_padding"
+        android:paddingRight="@dimen/global_padding">
+
+        <TextView
+            android:id="@+id/time_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/remaining_time_order_payment"
+            android:textColor="@color/selector_red_text"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/rl_outsaletime_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:textColor="@color/color_accent"
+            android:text="jfodjfjdo"
+            android:visibility="gone"
+            android:textSize="@dimen/text_size_normal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <cn.iwgang.countdownview.CountdownView
+            android:id="@+id/countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            tools:isHideTimeBackground="false"
+            tools:isShowTimeBgDivisionLine="false"
+            tools:timeBgColor="@color/color_accent"
+            tools:isShowDay="false"
+            tools:timeBgRadius="2dp"
+            tools:isShowHour="true"
+            tools:isShowMinute="true"
+            tools:isShowSecond="true"
+            tools:isShowMillisecond="false"
+            tools:timeTextColor="@color/white"
+            tools:timeTextSize="14sp"
+            tools:isTimeTextBold="true"
+            tools:suffixGravity="center"
+            tools:suffixTextColor="@color/red"
+            tools:suffixTextSize="14sp"
+            tools:suffixDay="天"
+            tools:suffixHour=":"
+            tools:suffixMinute=":"
+            tools:suffixSecond=""  />
+
+    </RelativeLayout>
+
+    <View style="@style/h_line" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45"
+        android:background="@color/white"
+        android:paddingTop="@dimen/space_5"
+        android:paddingBottom="@dimen/space_5"
+        android:paddingLeft="@dimen/global_padding"
+        android:paddingRight="@dimen/global_padding">
+
+        <TextView
+            android:id="@+id/order_no_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:text="@string/order_num"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/order_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_normal" />
+
+    </RelativeLayout>
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/global_padding"
+        android:paddingRight="@dimen/global_padding">
+
+        <TextView
+            android:id="@+id/order_time_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:text="@string/order_time"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/order_cancel_btn"
+            style="@style/button_small"
+            android:background="@drawable/btn_bg_red_line"
+            android:text="@string/cancel_orders"
+            android:textColor="@color/selector_red_text"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+    <View
+        style="@style/h_line"
+        android:layout_marginTop="@dimen/space_15" />
+
+    <!-- 快递信息 -->
+    <RelativeLayout
+        android:id="@+id/order_wuliu"
+        style="@style/option_item"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/order_wuliu_text"
+            android:lineSpacingExtra="@dimen/space_5"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/space_5"
+            android:paddingBottom="@dimen/space_5"
+            style="@style/option_item_text_title" />
+
+        <TextView
+            android:id="@+id/order_wuliu_text_copy"
+            android:text="@string/check_logistics"
+            android:layout_toLeftOf="@+id/accessview_kd"
+            android:padding="@dimen/space_5"
+            android:textSize="@dimen/text_size_small"
+            android:background="@drawable/b_copy_order_bg"
+            style="@style/option_item_text_title" />
+
+        <ImageView
+            android:id="@+id/accessview_kd"
+            android:layout_marginLeft="@dimen/space_3"
+            style="@style/option_item_arrow_img"/>
+
+        <View
+            style="@style/h_line"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <include
+            layout="@layout/layout_address"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/address_modify_text"
+            android:text="@string/update_address"
+            android:layout_toLeftOf="@+id/accessview_kd"
+            android:padding="@dimen/space_5"
+            android:layout_marginRight="@dimen/global_padding"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/text_size_small"
+            android:background="@drawable/b_copy_order_bg"
+            style="@style/option_item_text_title"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_marginTop="@dimen/global_padding" />
+
+    <!-- 商品金额 -->
+    <RelativeLayout
+        android:id="@+id/order_amount"
+        style="@style/option_item"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/order_title_amount"
+            style="@style/option_item_text_title"
+            android:text="@string/goods_amount" />
+
+        <TextView
+            android:id="@+id/order_value_amount"
+            style="@style/option_item_text_value"
+            android:text="¥ --"
+            android:textColor="@color/text_dark" />
+    </RelativeLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_marginLeft="@dimen/global_padding" />
+
+    <!-- 转发抵扣 -->
+    <RelativeLayout
+        android:id="@+id/order_dikou"
+        style="@style/option_item"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/order_title_dikou"
+            style="@style/option_item_text_title"
+            android:text="@string/youhui_tips" />
+
+        <TextView
+            android:id="@+id/order_value_dikou"
+            style="@style/option_item_text_value"
+            android:text="¥ --"
+            android:textColor="@color/text_dark" />
+    </RelativeLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_marginLeft="@dimen/global_padding" />
+
+    <!-- 运费 -->
+    <RelativeLayout
+        android:id="@+id/order_yunfei"
+        style="@style/option_item"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/order_title_yunfei"
+            style="@style/option_item_text_title"
+            android:text="@string/freight" />
+
+        <TextView
+            android:id="@+id/order_value_yunfei"
+            style="@style/option_item_text_value"
+            android:text="¥ --"
+            android:textColor="@color/text_dark" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/order_dingdanjine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            style="@style/h_line"
+            android:layout_marginLeft="@dimen/global_padding" />
+
+        <!-- 订单金额 -->
+        <RelativeLayout
+            style="@style/option_item"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/order_title_dingdan"
+                style="@style/option_item_text_title"
+                android:text="@string/order_amount" />
+
+            <TextView
+                android:id="@+id/order_value_dingdan"
+                style="@style/option_item_text_value"
+                android:text="¥ --"
+                android:textColor="@color/text_dark" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/order_tuikuanjine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            style="@style/h_line"
+            android:layout_marginLeft="@dimen/global_padding" />
+
+        <!-- 退款金额 -->
+        <RelativeLayout
+            style="@style/option_item"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/order_title_tuikuanjine"
+                style="@style/option_item_text_title"
+                android:text="@string/refund_amount"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/order_value_tuikuanjine"
+                style="@style/option_item_text_value"
+                android:text="¥ --"
+                android:textColor="@color/red" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_15"
+        android:background="@color/color_bg_header"
+        android:paddingBottom="@dimen/space_5"
+        android:paddingLeft="@dimen/global_padding"
+        android:paddingTop="@dimen/space_5">
+
+        <ImageView
+            android:id="@+id/pinpai_icon"
+            android:layout_width="@dimen/space_40"
+            android:layout_height="@dimen/space_30"
+            android:layout_marginRight="@dimen/global_padding"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/pinpai_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pinpai_icon"
+            android:textColor="@color/text_dark"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_size_normal_l" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_30"
+            android:padding="@dimen/space_5"
+            android:drawableLeft="@drawable/icon_scanex"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:layout_marginRight="@dimen/space_5"
+            android:visibility="gone"
+            android:text="@string/wweep_order_picking"/>
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/space_30"
+            android:layout_height="@dimen/space_30"
+            android:padding="@dimen/space_5"
+            android:src="@drawable/icon_search"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/global_padding"
+            android:scaleType="fitCenter" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+

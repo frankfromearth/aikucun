@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="已加载完毕"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/text_size_normal_s" />
+    <!--android:text="已加载完毕"-->
+</LinearLayout>

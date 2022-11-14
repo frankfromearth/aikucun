@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_light"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/color_tab_line" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_bg_light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_tip"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#de6441"
+                    android:paddingLeft="@dimen/space_10"
+                    android:paddingTop="@dimen/space_10"
+                    android:paddingBottom="@dimen/space_10"
+                    android:paddingRight="@dimen/space_40"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    android:text="@string/address_tip"/>
+
+                <ImageButton
+                    android:id="@+id/btn_tip"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/btn_remark_selector"
+                    android:background="@null"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/address_option_name"
+                style="@style/option_item"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/address_title_name"
+                    style="@style/option_item_text_title"
+                    android:text="@string/address_receiver" />
+
+                <EditText
+                    android:id="@+id/address_name_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:maxLength="10"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入收货人名字"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:paddingRight="@dimen/space_5"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </LinearLayout>
+
+            <View style="@style/h_line" />
+
+
+            <LinearLayout
+                android:id="@+id/address_option_mobile"
+                style="@style/option_item"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/address_title_mobile"
+                    style="@style/option_item_text_title"
+                    android:text="@string/address_phone" />
+
+                <EditText
+                    android:id="@+id/address_mobile_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入收货人电话"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:paddingRight="@dimen/space_5"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </LinearLayout>
+
+            <View style="@style/h_line" />
+
+            <View
+                style="@style/h_line"
+                android:layout_marginTop="@dimen/space_20" />
+
+            <RelativeLayout
+                android:id="@+id/address_option_city"
+                style="@style/option_item"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/address_title_city"
+                    style="@style/option_item_text_title"
+                    android:text="@string/address_city" />
+
+                <ImageView style="@style/option_item_arrow_img" />
+
+            </RelativeLayout>
+
+            <View style="@style/h_line" />
+
+            <EditText
+                android:id="@+id/address_addr_edit"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:padding="@dimen/space_15"
+                android:background="@color/white"
+                android:hint="@string/address_input_detail_address"
+                android:imeOptions="actionDone"
+                android:gravity="left|top"
+                android:inputType="text"
+                android:textSize="@dimen/text_size_normal" />
+
+            <View style="@style/h_line" />
+
+
+            <RelativeLayout
+                android:id="@+id/default_rr"
+                style="@style/option_item"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/address_set_default_address" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <View style="@style/h_line" />
+
+            <Button
+                android:id="@+id/save_button"
+                style="@style/button_common"
+                android:background="@drawable/btn_bg_red_selector"
+                android:layout_marginLeft="@dimen/space_20"
+                android:layout_marginRight="@dimen/space_20"
+                android:layout_marginTop="@dimen/space_20"
+                android:text="@string/save"/>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

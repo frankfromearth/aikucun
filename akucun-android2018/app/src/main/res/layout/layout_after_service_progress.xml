@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll0"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dui"/>
+
+        <TextView
+            android:id="@+id/tv0"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/space_5"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:text="@string/submit_application"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal_s" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@color/green1"/>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dui"/>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/space_5"
+            android:layout_weight="1"
+            android:text="@string/after_sales_audit"
+            android:textAlignment="center"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal_s" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/space_20"
+        android:visibility="invisible"
+        android:background="@color/green1"/>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/quan"/>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_marginTop="@dimen/space_5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@string/my_orders"
+            android:textAlignment="center"
+            android:textColor="@color/color_accent"
+            android:textSize="@dimen/text_size_normal_s" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/space_20"
+        android:visibility="invisible"
+        android:background="@color/color_accent"/>
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/quan"/>
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/space_5"
+            android:layout_weight="1"
+            android:text="@string/my_orders"
+            android:textAlignment="center"
+            android:textColor="@color/color_accent"
+            android:textSize="@dimen/text_size_normal_s" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

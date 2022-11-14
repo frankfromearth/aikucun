@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45"
+        android:background="@color/color_bg_title"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_8"
+        android:paddingLeft="@dimen/space_10"
+        android:paddingTop="@dimen/space_8">
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/search_bar_bg"
+            android:drawableLeft="@drawable/icon_search_small"
+            android:drawablePadding="5dp"
+            android:hint="@string/search_content"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="@dimen/space_5"
+            android:paddingRight="@dimen/space_5"
+            android:textSize="@dimen/text_size_normal"/>
+
+        <TextView
+            android:id="@+id/search_cancel_btn"
+            android:layout_width="@dimen/space_50"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/selector_normal_text"
+            android:textSize="@dimen/text_size_normal"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/toolbar"
+        android:background="@color/color_tab_line"/>
+
+    <!--
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_45"
+            android:theme="@style/Toolbar_Theme" />
+            -->
+
+
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:background="@color/white" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/space_15"
+        android:paddingRight="@dimen/space_15">
+
+        <TextView
+            android:id="@+id/header_user_no"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_45"
+            android:gravity="center_vertical"
+            android:text="@string/purchasing_num"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/header_back_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_5"
+            android:background="@drawable/b_copy_order_bg"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="@string/recycling_list"
+            android:textColor="@color/color_accent"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/text_size_small" />
+
+    </RelativeLayout>
+
+
+    <View style="@style/h_line" />
+
+    <include layout="@layout/layout_address" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_padding"
+        android:background="@color/color_bg_light" />
+
+</LinearLayout>
+
+

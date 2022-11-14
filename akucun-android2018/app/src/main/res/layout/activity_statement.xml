@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_settings_bg"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_toolbar"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/color_tab_line"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/rl_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleHorizontal" />
+
+        <TextView
+            android:id="@+id/content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/space_30"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/global_padding"
+            android:text="@string/download_bill"
+            android:textSize="@dimen/text_size_normal"
+            />
+
+        <!-- 预 览 -->
+        <RelativeLayout
+            android:id="@+id/setting_option_preview"
+            android:layout_marginTop="@dimen/space_20"
+            style="@style/option_item">
+
+            <TextView
+                style="@style/option_item_text_title"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="@color/color_accent"
+                android:text="@string/preview"/>
+
+        </RelativeLayout>
+
+        <!-- 分 享 -->
+        <RelativeLayout
+            android:id="@+id/setting_option_share"
+            android:layout_marginTop="@dimen/space_20"
+            style="@style/option_item">
+
+            <TextView
+                style="@style/option_item_text_title"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="@color/color_accent"
+                android:text="@string/share"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

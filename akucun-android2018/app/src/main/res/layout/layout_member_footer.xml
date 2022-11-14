@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 会员权益 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            style="@style/option_item_text_title"
+            android:paddingLeft="@dimen/space_10"
+            android:paddingTop="@dimen/space_10"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/member_rights"
+            android:textColor="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/vip_info_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/space_10"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/space_10"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/option_item_text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vip_level_rule"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <View
+                style="@style/h_line"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_10"
+        android:background="@drawable/btn_bg_normal_border"
+        android:padding="@dimen/space_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/space_5"
+            android:text="@string/member_tip"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_normal" />
+
+
+    </RelativeLayout>
+</LinearLayout>

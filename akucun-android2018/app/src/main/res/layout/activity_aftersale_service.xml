@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_bg_light"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/color_tab_line" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 商品 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/global_padding"
+            android:paddingRight="@dimen/global_padding"
+            android:paddingBottom="@dimen/global_padding">
+
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_marginBottom="@dimen/space_10"
+                android:layout_marginRight="@dimen/global_padding"
+                android:layout_marginTop="@dimen/space_10"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/contentTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_5">
+
+                    <TextView
+                        android:id="@+id/skuTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_normal"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:id="@+id/amountTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/text_size_normal_s" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            style="@style/h_line"
+            android:layout_marginTop="@dimen/space_15" />
+
+        <!-- 选择问题 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginTop="@dimen/space_5"
+                android:gravity="center"
+                android:paddingLeft="@dimen/global_padding"
+                android:paddingRight="@dimen/global_padding"
+                android:text="选择问题"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/space_5"
+                android:gravity="center"
+                android:paddingLeft="@dimen/global_padding"
+                android:paddingRight="@dimen/global_padding"
+                android:text="@string/choose_your_goods_problem"
+                android:textColor="@color/color_accent"
+                android:textSize="@dimen/text_size_normal" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/problem0"
+                style="@style/ServiceItem"
+                android:tag="1000"
+                android:text="@string/missing_goods" />
+
+            <TextView
+                android:id="@+id/problem1"
+                style="@style/ServiceItem"
+                android:tag="1001"
+                android:text="@string/quality_problem" />
+
+            <TextView
+                android:id="@+id/problem2"
+                style="@style/ServiceItem"
+                android:tag="1002"
+                android:text="@string/wrong_number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/problem3"
+                style="@style/ServiceItem"
+                android:tag="1003"
+                android:text="@string/wrong_color" />
+
+            <TextView
+                android:id="@+id/problem4"
+                style="@style/ServiceItem"
+                android:tag="1004"
+                android:text="@string/wrong_size" />
+
+            <TextView
+                android:id="@+id/problem5"
+                style="@style/ServiceItem"
+                android:tag="1005"
+                android:text=""
+                android:visibility="invisible" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <!-- 选择服务 -->
+
+            <View
+                style="@style/h_line"
+                android:background="@color/color_bg_light"
+                android:layout_height="@dimen/space_15" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/global_padding"
+                    android:paddingRight="@dimen/global_padding"
+                    android:text="@string/choose_service"
+                    android:textSize="@dimen/text_size_normal" />
+
+
+                <TextView
+                    android:id="@+id/tv_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/global_padding"
+                    android:paddingRight="@dimen/global_padding"
+                    android:text="@string/choose_service_need"
+                    android:textColor="@color/color_accent"
+                    android:textSize="@dimen/text_size_normal" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/problem20"
+                    style="@style/ServiceItem"
+                    android:tag="2000"
+                    android:visibility="gone"
+                    android:text="@string/return_refund" />
+
+                <TextView
+                    android:id="@+id/problem21"
+                    style="@style/ServiceItem"
+                    android:tag="2001"
+                    android:text="@string/return_reissue" />
+
+                <TextView
+                    android:id="@+id/problem22"
+                    style="@style/ServiceItem"
+                    android:tag="2002"
+                    android:text=""
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 问题描述 -->
+
+
+        <LinearLayout
+            android:id="@+id/ll_question_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <View
+                style="@style/h_line"
+                android:background="@color/color_bg_light"
+                android:layout_height="@dimen/space_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginTop="@dimen/space_5"
+                android:gravity="center"
+                android:paddingLeft="@dimen/global_padding"
+                android:paddingRight="@dimen/global_padding"
+                android:text="@string/problem_description"
+                android:textSize="@dimen/text_size_normal" />
+
+
+            <EditText
+                android:id="@+id/edite_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_50"
+                android:layout_marginLeft="@dimen/global_padding"
+                android:layout_marginRight="@dimen/global_padding"
+                android:layout_marginTop="@dimen/space_5"
+                android:background="@color/color_bg_title"
+                android:gravity="left|top"
+                android:padding="@dimen/space_5"
+                android:hint="@string/describe_details_problem"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_normal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/global_padding">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView_pinzhen"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_pinzhen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/ic_round_launcher"
+                        android:text="@string/upload_photos_problem_items"
+                        android:textColor="@color/color_accent" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_takepicture"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/camera" />
+            </RelativeLayout>
+
+
+            <View
+                style="@style/h_line"
+                android:background="@color/color_bg_light"
+                android:layout_height="@dimen/space_15" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save_button"
+            style="@style/button_common"
+            android:visibility="gone"
+            android:layout_margin="@dimen/space_20"
+            android:background="@drawable/btn_bg_red_selector"
+            android:text="@string/submit" />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_comment_selector">
+
+    <TextView
+        android:id="@+id/msg_content_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_light"
+        android:padding="@dimen/space_1"
+        android:textSize="@dimen/text_size_normal_s"/>
+
+</RelativeLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="jx_app_name">佳信客服Demo</string>
+    <string name="jx_message">消息</string>
+    <string name="jx_contact">通讯录</string>
+    <string name="jx_meeting">会议</string>
+    <string name="jx_me">我</string>
+    <string name="jx_username">用户名</string>
+    <string name="jx_password">密码</string>
+    <string name="jx_login">登录</string>
+    <string name="jx_scan_qrcode">扫描二维码</string>
+    <string name="jx_hint_appkey">请输入appkey</string>
+    <string name="jx_username_pwd_empty">用户和密码不能为空!</string>
+    <string name="jx_login_error">登录失败</string>
+    <string name="jx_shop">商城</string>
+    <string name="jx_logout">登出</string>
+    <string name="jx_conversation">会话</string>
+    <string name="jx_customer">技能组ID</string>
+    <string name="jx_orgName">企业ID</string>
+    <string name="jx_contact_customer">联系客服</string>
+    <string name="jx_customer_empty">客服账号不能为空!</string>
+    <string name="jx_appkey_empty">appkey不能为空!</string>
+    <string name="jx_sendmsg">发消息</string>
+    <string name="jx_image">图片</string>
+    <string name="jx_take_photo">拍照</string>
+    <string name="jx_satisfaction">满意度</string>
+    <string name="jx_voicecall">语音通话</string>
+    <string name="jx_videoall">视频通话</string>
+    <string name="jx_send">发送</string>
+    <string name="jx_exit_conversation_tips">是否取消等待?</string>
+    <string name="jx_cancel_wait">取消等待</string>
+    <string name="jx_cancel_wait_failed">取消等待失败</string>
+    <string name="jx_not_connect_server">无法连接到服务器!</string>
+    <string name="jx_cancel_waiting">取消等待中...</string>
+    <string name="jx_request_waiting">等待客服服务中...</string>
+    <string name="jx_send_message_error">发送消息失败</string>
+    <string name="jx_customer_offline">客服处于离线状态</string>
+    <string name="jx_on_service">处于服务状态</string>
+    <string name="jx_on_robot">机器人正为您服务</string>
+    <string name="jx_not_inQueue">当前不在服务队列</string>
+    <string name="jx_wait_queue">处于等待状态</string>
+    <string name="jx_customer_exit">客服结束会话</string>
+    <string name="jx_request_customerFailed">请求客服失败</string>
+    <string name="jx_request_customer_timeout">请求客服超时</string>
+    <string name="jx_org_not_exist">企业ID不存在!</string>
+    <string name="jx_customer_service_offline">暂无客服人员在线</string>
+    <string name="jx_queue_user_limit_exceeded">当前排队人数较多，请稍后咨询</string>
+    <string name="jx_mcsid_not_exist">技能组不存在!</string>
+    <string name="jx_home">主页</string>
+    <string name="jx_buy">立即购买</string>
+    <string name="jx_appkey">APPKEY</string>
+    <string name="jx_message_empty">消息为空</string>
+    <string name="jx_imagepath_empty">图片文件路径为空!</string>
+    <string name="jx_videopath_empty">视频文件路径为空!</string>
+    <string name="jx_press_to_speak">按住说话</string>
+    <string name="jx_canel_send_voice">松开手指，取消发送</string>
+    <string name="jx_sliding_to_cancel">手指上划，取消发送</string>
+    <string name="jx_recording_too_short">录音时间太短！</string>
+    <string name="jx_illega_appkey">非法的appkey!</string>
+    <string name="jx_cant_join_session">无法加入到会话中!</string>
+    <string name="jx_loading_image_failed">加载原始图片失败！</string>
+    <string name="jx_new_message_notification">您有一条新消息来自：</string>
+    <string name="jx_imcoming_message_ticker_text">您有消息,请查收: <xliff:g id="text">%0$s</xliff:g></string>
+    <string name="jx_image_message">[图片]</string>
+    <string name="jx_voice_message">[语音]</string>
+    <string name="jx_video_message">[视频]</string>
+    <string name="jx_rich_message">[图文]</string>
+    <string name="jx_cant_record_audio">录制音频失败!</string>
+    <string name="jx_loading_image">加载原图中...</string>
+    <string name="jx_enter_group">请求客服</string>
+    <string name="jx_loadin_groups_failed">加载技能组失败!</string>
+    <string name="jx_just_now">刚刚</string>
+    <string name="jx_minute_ago">1 分钟前</string>
+    <string name="jx_minutes_ago">%d分钟前</string>
+    <string name="jx_activied">活跃状态</string>
+    <string name="jx_deactivied">已结束状态</string>
+    <string name="jx_disconnect">客服离线</string>
+    <string name="jx_offline">(离线)</string>
+    <string name="jx_tips">提示</string>
+    <string name="jx_message_tips">当前会话处于结束状态，是否重新请求客服?</string>
+    <string name="jx_delete_conversation_tips">确认删除该会话?</string>
+    <string name="jx_network_error">暂时无法连接服务器，请检查网络设置！</string>
+    <string name="jx_conversation_ended">会话已结束,无法发送消息！</string>
+    <string name="jx_commodity_link">发送商品链接</string>
+    <string name="jx_send_image_error">发送图片失败 ！</string>
+    <string name="jx_get_image_failed">获取系统图库图片失败 !</string>
+    <string name="jx_input_email">开发者邮箱账号</string>
+    <string name="jx_email_empty">开发者邮箱账号不能为空!</string>
+    <string name="jx_email_illegal">非法的邮箱格式</string>
+    <string name="jx_password_empty">用户密码不能为空!</string>
+    <string name="jx_fetching">登录中...</string>
+    <string name="jx_fetch_error">登录失败!</string>
+    <string name="jx_account_password_error">账号或密码不正确！</string>
+    <string name="jx_delete">删除</string>
+    <string name="jx_logout_error">登出失败!</string>
+    <string name="jx_logout_tips">是否确认登出账号？</string>
+    <string name="jx_admin">系统消息</string>
+    <string name="jx_jxrobot">机器人</string>
+    <string name="jx_delete_messages_tips">是否删除所有选中的消息？</string>
+    <string name="jx_cant_delet_message">请选中待删除消息！</string>
+    <string name="jx_update_version">版本更新</string>
+    <string name="jx_update_version_exception">版本更新下载失败！</string>
+    <string name="jx_update_progress">下载进度：</string>
+    <string name="jx_transfer_customer_service">确定转接到人工服务?</string>
+    <string name="jx_transfer_robot_service">转接到机器人客服</string>
+    <string name="jx_transfer_customering">转接人工客服,请稍候...</string>
+    <string name="jx_transfer_roboting">转接机器人服务，请稍候...</string>
+    <string name="jx_transfer_customer_timeout">转接人工客服超时</string>
+    <string name="jx_transfer_customerFailed">转接人工客服失败</string>
+    <string name="jx_transfer_robotFailed">转接机器人服务失败</string>
+    <string name="jx_transfer_customer">转接人工客服中，请稍候</string>
+    <string name="jx_transfer_robot">转接机器人服务中，请稍候</string>
+    <string name="jx_great_satisfaction">非常满意</string>
+    <string name="jx_general">一般</string>
+    <string name="jx_dissatisfaction">不满意</string>
+    <string name="jx_great_dissatisfaction">非常不满意</string>
+    <string name="jx_evaluation">评价</string>
+    <string name="jx_submit_evaluation">提交评价</string>
+    <string name="jx_submit_evaluation_success">提交评价成功</string>
+    <string name="jx_submit_evaluation_failed">提交评价失败</string>
+    <string name="jx_submit_evaluation_timeout">评价失败,已超过评价有效期</string>
+    <string name="jx_evaluated">已评价</string>
+    <string name="jx_banned_other_typemsg">机器人无法接收文本以外的消息</string>
+    <string name="jx_leave_message_title">离线留言</string>
+    <string name="jx_not_online_cs_tips">暂无客服人员在线，请求留言：</string>
+    <string name="jx_leavmsging">提交留言中</string>
+    <string name="jx_leavemsg_success">已发送留言</string>
+    <string name="jx_leavemsg_error">留言失败</string>
+    <string name="jx_leavemsg">留言</string>
+    <string name="jx_robot_service">机器人服务</string>
+    <string name="jx_transfer_robot_timeout">转接机器人服务超时</string>
+    <string name="jx_commodity_details">商品详情</string>
+    <string name="jx_add_to_card">加入购物车</string>
+    <string name="jx_invite_evaluate">邀请您评价本次服务。</string>
+    <string name="jx_commonly_used_quick_questions">常用快捷提问</string>
+    <string name="jx_connect_camera_failed">无法连接到本地相机</string>
+    <string name="jx_camera_not_found">检测不到相机设备</string>
+    <string name="jx_satisfaction_evaluate">满意度评价</string>
+    <string name="jx_leavemsg_empty">留言为空，无法留言</string>
+    <string name="jx_leavemsg_over_limit">留言超出200个字符，无法留言</string>
+    <string name="jx_quick_question_is_null">快捷提问列表为空，请到开发者中心添加</string>
+    <string name="jx_quick_question_exception">获取快捷提问失败</string>
+    <string name="jx_cancel_wait_tipsline">如需放弃接入,请点击</string>
+    <string name="jx_waiting">客服繁忙,请稍等,当前等待位置</string>
+    <string name="jx_agent_busy_try_again">客服繁忙，请稍后再试！</string>
+    <string name="jx_disconnected_please_request_again">连接断开，请重新请求客服</string>
+    <string name="jx_close_session_execption">结束会话异常</string>
+    <string name="jx_evaluate_before_close_session">是否进行满意度评价</string>
+    <string name="jx_confirm_close_session">确认结束会话？</string>
+    <string name="jx_confirm_no_evaluate">不评价</string>
+    <string name="jx_leave_message_online">在线留言</string>
+    <string name="jx_left_out">退出</string>
+    <string name="jx_cannot_evaluate_in_waiting">排队期间无法进行满意度评价</string>
+    <string name="jx_unknow_type_message">此消息类型无法显示!</string>
+    <string name="jx_cannot_download_overdue">文件已过期，无法下载!</string>
+    <string name="jx_cannot_open_this_type_file">无法打开此类型文件：</string>
+    <string name="jx_prompt">提示</string>
+    <string name="jx_the_video_to_start">录像开始</string>
+    <string name="jx_whether_to_send">是否发送？</string>
+    <string name="jx_open_the_equipment_failure">打开设备失败!</string>
+    <string name="jx_confirm">确定</string>
+    <string name="jx_cancel">取消</string>
+    <string name="jx_move_up_to_cancel">上划取消</string>
+    <string name="jx_lose_to_cancel">松开取消</string>
+    <string name="jx_recorder_video">录像</string>
+    <string name="jx_no_more_lmsg">暂无更多消息</string>
+    <string name="jx_get_lmsg_failed">获取消息失败</string>
+    <string name="jx_recording_video_too_short">录制时间太短</string>
+    <string name="jx_recorder_processing">请稍后...</string>
+    <string name="jx_agent_inservice">客服 [%s] 正在为您服务</string>
+    <string name="jx_agent_nick">客服 %s</string>
+    <string name="jx_file_over_size">文件大小不能超过%sM</string>
+    <string name="jx_file_format_no_match">文件格式不支持</string>
+    <string name="jx_file_expired">该文件已失效</string>
+    <string name="jx_videomsg">小视频</string>
+    <string name="jx_function_quick_question">快捷提问</string>
+    <string name="jx_message_center">消息中心</string>
+    <string name="jx_push_message_ticker_text">您有新留言,请查收: <xliff:g id="text">%0$s</xliff:g></string>
+    <string name="jx_push_message_title">您有新留言,请查收: </string>
+    <string name="jx_expression_tips">[表情] </string>
+    <string name="jx_recall_tips">有客服回呼您</string>
+    <string name="jx_choose_group">咨询类型</string>
+    <string name="jx_appkey_not_exist">appkey无效!</string>
+    <string name="jx_storage_dir_not_found">没有找到储存目录</string>
+    <string name="jx_sdcard_not_found">没有储存卡</string>
+    <string name="jx_session_ending">本次会话已结束</string>
+    <string name="jx_evaluate_thanks_msg">尊敬的用户，很荣幸为您服务，诚邀您对本次服务作出评价，我们将持续改善服务质量。</string>
+    <string name="jx_this_session_has_ended">本次会话已结束</string>
+    <string name="jx_agent_has_ended_this_session">客服已结束本次会话</string>
+    <string name="jx_agentx_has_ended_this_session">客服 [%s] 已结束本次会话</string>
+    <string name="jx_evaluate_star_explanation">5颗星：表示非常满意\n4颗星：表示满意\n3颗星：表示一般\n2颗星：表示不满意\n1颗星：表示非常不满意</string>
+    <string name="jx_hold_to_record">按住拍</string>
+    <string name="jx_rich_text_message">[富文本]</string>
+    <string name="jx_exit">退出</string>
+    <string name="jx_turn_to_man">转人工</string>
+    <string name="jx_leaving_message">留言</string>
+
+    <string-array name="jx_text_message_operation_item">
+        <item>删除消息</item>
+        <item>批量删除</item>
+        <item>复制消息</item>
+    </string-array>
+    <string-array name="jx_other_message_operation_item">
+        <item>删除消息</item>
+        <item>批量删除</item>
+    </string-array>
+
+    <string-array name="jx_text_message_operation_item_extra">
+        <item>删除消息</item>
+        <item>批量删除</item>
+        <item>复制消息</item>
+        <item>重发消息</item>
+    </string-array>
+    <string-array name="jx_other_message_operation_item_extra">
+        <item>删除消息</item>
+        <item>批量删除</item>
+        <item>重发消息</item>
+    </string-array>
+    <string-array name="jx_message_url_options">
+        <item>访问链接地址</item>
+        <item>发送链接地址</item>
+    </string-array>
+    <string-array name="jx_choice_video">
+        <item name="local_video">本地视频</item>
+        <item name="take_video">拍摄</item>
+    </string-array>
+</resources>

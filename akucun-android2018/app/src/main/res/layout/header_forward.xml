@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header_user_no"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/global_padding"
+        android:text="@string/purchasing_num"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_normal" />
+
+    <View
+        style="@style/h_line"
+        android:layout_marginLeft="@dimen/global_padding" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45"
+        android:paddingLeft="@dimen/global_padding"
+        android:paddingRight="@dimen/global_padding"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/header_yizhuanfa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/forwarded"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/header_yijiangli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rewarded"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_marginLeft="@dimen/global_padding" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_45"
+        android:paddingLeft="@dimen/global_padding"
+        android:paddingRight="@dimen/global_padding"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/header_kedikou"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/deductible_balance"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/header_yidikou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount_deducted"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/h_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_padding"
+        android:background="@color/color_bg_light" />
+
+</LinearLayout>
+
+

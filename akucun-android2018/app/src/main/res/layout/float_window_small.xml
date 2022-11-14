@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/small_window_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    <Button
+        android:id="@+id/button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:clickable="false"
+        android:text="@string/start_forward"
+        android:textSize="@dimen/space_12"
+        android:background="@drawable/btn_bg_circle"
+        />
+</LinearLayout>

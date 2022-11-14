@@ -1,0 +1,1 @@
+include ':app', ':lib-spinkit', ':lib-sczbar',':AliyunSnap:snap_demo',':AliyunSnap:snap_core', 'umfPay','lib_jx_ui_git'

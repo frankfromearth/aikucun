@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- 配置服务器使用协议http/https -->
+    <configure_server_protocol type="string">http</configure_server_protocol>
+    <!-- 配置服务器访问ip地址或域名 -->
+    <configure_server_address type="string">rest.kefu.aikucun.com</configure_server_address>
+    <!-- 配置服务器端口 -->
+    <nconfigure_server_port type="integer">80</nconfigure_server_port>
+</config>
+

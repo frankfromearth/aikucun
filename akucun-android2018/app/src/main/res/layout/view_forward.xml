@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_myinfo_changeaddress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/option_item"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/close_iv"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_x" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/option_item_text_title"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/forward_set_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/selector_icon_config" />
+        </RelativeLayout>
+
+        <View
+            style="@style/h_line"
+            android:layout_height="@dimen/space_4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <com.aikucun.akapp.view.MultiImageView
+                android:id="@+id/multiImagView"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_marginBottom="@dimen/space_8"
+                android:layout_marginLeft="@dimen/space_6"
+                android:layout_marginTop="@dimen/space_8" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_10"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_size_normal_s" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_10"
+            android:text="@string/goods_intro_copyed_can_parse"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="normal" />
+
+        <View style="@style/h_line" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/more_normal_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_4"
+                android:checked="true"
+                android:text="@string/more_normal_img"
+                android:textColor="@color/color_accent"
+                android:textSize="@dimen/text_size_small" />
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_4"
+                android:checked="false"
+                android:text="@string/signle_img"
+                android:textColor="@color/color_accent"
+                android:textSize="@dimen/text_size_small" />
+
+            <CheckBox
+                android:id="@+id/more_img_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_4"
+                android:layout_marginLeft="@dimen/space_4"
+                android:text="@string/more_img"
+                android:textColor="@color/color_accent"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+
+
+        <View
+            style="@style/h_line"
+            android:layout_height="@dimen/space_10" />
+
+        <RelativeLayout
+            android:id="@+id/rl_pinpai"
+            style="@style/option_item"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_pinpai"
+                style="@style/option_item_text_title" />
+        </RelativeLayout>
+
+        <View style="@style/h_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_forward_no"
+            style="@style/option_item"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_jump_no"
+                style="@style/option_item_text_title"
+                android:text="跳到第 001 号" />
+        </RelativeLayout>
+
+        <View style="@style/h_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_forward_previous"
+            style="@style/option_item"
+            android:gravity="center_horizontal">
+
+            <TextView
+                style="@style/option_item_text_title"
+                android:text="@string/forward_previous" />
+
+        </RelativeLayout>
+
+        <View style="@style/h_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_forward_next"
+            style="@style/option_item"
+            android:gravity="center_horizontal">
+
+            <TextView
+                style="@style/option_item_text_title"
+                android:text="@string/skip_nbsp" />
+
+        </RelativeLayout>
+
+        <View style="@style/h_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_forward_btn"
+            style="@style/option_item"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/forward_text"
+                style="@style/option_item_text_title"
+                android:text="@string/forward_nbsp"
+                android:textColor="#de6441" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

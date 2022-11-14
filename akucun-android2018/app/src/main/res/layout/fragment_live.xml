@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/live_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_4"
+        android:paddingTop="@dimen/space_4">
+
+        <TextView
+            android:id="@+id/preparation_type_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/space_8"
+            android:text="@string/sale_all"
+            android:textColor="@color/selector_ordertype_text"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/preparation_type_ncotice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/space_8"
+            android:text="@string/activities_in_ncotice"
+            android:textColor="@color/selector_ordertype_text"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/preparation_type_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/space_8"
+            android:text="@string/activities_in_progress"
+            android:textColor="@color/selector_ordertype_text"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/top_layout"
+        android:background="@color/color_tab_line" />
+
+    <com.jude.easyrecyclerview.EasyRecyclerView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line_view"
+        android:visibility="visible"
+        app:layout_empty="@layout/view_empty"
+        app:recyclerClipToPadding="true"
+        app:scrollbarStyle="insideOverlay"
+        app:scrollbars="vertical" />
+
+</RelativeLayout>

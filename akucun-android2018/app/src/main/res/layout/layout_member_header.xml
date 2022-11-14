@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_bg_light"
+        android:padding="@dimen/global_padding">
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="@dimen/space_60"
+            android:layout_height="@dimen/space_60"
+            android:src="@drawable/icon_default_avatar"
+            android:layout_marginRight="@dimen/global_padding"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/user_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/user_image"
+            android:layout_toRightOf="@id/user_image"
+            android:text="@string/akc_nick_name"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal_l"/>
+
+        <TextView
+            android:id="@+id/user_vip_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/user_image"
+            android:layout_toRightOf="@id/user_name_text"
+            android:text="VIP"
+            android:layout_marginLeft="@dimen/space_5"
+            android:layout_marginTop="@dimen/space_4"
+            android:paddingLeft="@dimen/space_2"
+            android:paddingRight="@dimen/space_2"
+            android:textColor="@color/white"
+            android:background="@drawable/b_vip_disable_bg"
+            android:textSize="9sp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/user_image"
+            android:layout_alignLeft="@id/user_name_text">
+
+            <RatingBar
+                android:id="@+id/ratingbar_rr"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:numStars="5"
+                android:rating="6"
+                android:isIndicator="true"
+                android:paddingTop="@dimen/space_2"
+                style="@style/foodRatingBar"
+                />
+
+            <TextView
+                android:id="@+id/member_state_tv"
+                style="@style/option_item_text_title"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_small"
+                android:layout_marginLeft="@dimen/space_5"
+                android:text="@string/member_status"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/option_item_text_title"
+        android:padding="@dimen/space_10"
+        android:textColor="@color/gray"
+        android:text="@string/membership_packages" />
+
+
+</LinearLayout>

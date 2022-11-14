@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_light"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/color_tab_line" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/avatar_layout"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space_5"
+                android:paddingBottom="@dimen/space_5"
+                style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/avatar" />
+                <ImageView
+                    android:id="@+id/avatar_arrow_iv"
+                    style="@style/option_item_arrow_img" />
+
+                <com.aikucun.akapp.widget.RoundImageView
+                    android:id="@+id/head_image"
+                    android:layout_width="@dimen/space_45"
+                    android:layout_height="@dimen/space_45"
+                    android:layout_toLeftOf="@id/avatar_arrow_iv"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_default_avatar" />
+
+            </RelativeLayout>
+
+            <View style="@style/h_line_mar_left" />
+
+            <RelativeLayout
+                android:id="@+id/nickname_layout"
+                style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/user_nick_name" />
+
+                <ImageView
+                    android:id="@+id/nickname_arrow_iv"
+                    style="@style/option_item_arrow_img" />
+
+                <TextView
+                    android:id="@+id/user_nick_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/nickname_arrow_iv"
+                    android:textColor="@color/selector_normal_text"
+                    android:textSize="@dimen/text_size_normal_s" />
+            </RelativeLayout>
+
+            <View style="@style/h_line_mar_left" />
+
+            <RelativeLayout style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/user_phone_num" />
+
+
+                <TextView
+                    android:id="@+id/user_phone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/selector_normal_text"
+                    android:textSize="@dimen/text_size_normal_s" />
+            </RelativeLayout>
+
+            <View style="@style/h_line_mar_left" />
+
+            <RelativeLayout style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/purchasing_num" />
+
+
+                <TextView
+                    android:id="@+id/purchasing_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/selector_normal_text"
+                    android:textSize="@dimen/text_size_normal_s" />
+            </RelativeLayout>
+
+
+            <View
+                style="@style/h_line"
+                android:layout_height="@dimen/global_padding"
+                android:background="@color/color_bg_light" />
+
+            <RelativeLayout
+                android:id="@+id/vip_layout"
+                style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/vip_level" />
+
+                <ImageView
+                    android:id="@+id/vip_level_iv"
+                    style="@style/option_item_arrow_img" />
+
+                <TextView
+                    android:id="@+id/vip_level_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/vip_level_iv"
+                    android:textColor="@color/selector_normal_text"
+                    android:textSize="@dimen/text_size_normal_s" />
+            </RelativeLayout>
+
+            <View style="@style/h_line_mar_left" />
+
+            <RelativeLayout
+                android:id="@+id/address_manager_layout"
+                style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/address_manager" />
+
+                <ImageView style="@style/option_item_arrow_img" />
+
+            </RelativeLayout>
+
+            <View style="@style/h_line_mar_left" />
+
+            <RelativeLayout
+                android:id="@+id/realname_auth_layout"
+                style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/realname_auth" />
+
+                <ImageView
+                    android:id="@+id/realname_auth_iv"
+                    style="@style/option_item_arrow_img" />
+
+                <TextView
+                    android:id="@+id/realname_auth_status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/realname_auth_iv"
+                    android:textColor="@color/selector_normal_text"
+                    android:textSize="@dimen/text_size_normal_s" />
+            </RelativeLayout>
+
+            <View
+                style="@style/h_line"
+                android:layout_height="@dimen/global_padding"
+                android:background="@color/color_bg_light" />
+            <RelativeLayout
+                android:id="@+id/forward_set_layout"
+                style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/forward_set"/>
+
+                <ImageView style="@style/option_item_arrow_img"/>
+            </RelativeLayout>
+            <View style="@style/h_line_mar_left"/>
+
+            <!-- 下单备注开关 -->
+            <RelativeLayout
+                android:id="@+id/setting_option_remark"
+                style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/single_memo_switch"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+           <TextView
+               android:layout_width="match_parent"
+               android:text="@string/order_switch_intro"
+               android:background="@color/color_bg_light"
+               android:textSize="@dimen/space_12"
+               android:paddingTop="5dp"
+               android:paddingBottom="@dimen/space_10"
+               android:paddingLeft="@dimen/space_15"
+               android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/setting_layout"
+                style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/setting" />
+
+                <ImageView style="@style/option_item_arrow_img" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_light">
+
+
+                <Button
+                    android:id="@+id/exit_app_btn"
+                    style="@style/button_common"
+                    android:layout_marginBottom="@dimen/space_30"
+                    android:layout_marginLeft="@dimen/space_20"
+                    android:layout_marginRight="@dimen/space_20"
+                    android:layout_marginTop="@dimen/space_30"
+                    android:background="@drawable/btn_bg_red_selector"
+                    android:text="@string/exit_app"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="discover">发现</string>
+    <string name="send_discover_hint_title">标题...</string>
+    <string name="send_discover_hint">这一刻的想法...</string>
+    <string name="small_video">小视频</string>
+    <string name="choose_send_image">从手机相册选择</string>
+    <string name="album">相册</string>
+    <string name="take_phone">拍照</string>
+    <string name="shot_video">拍摄</string>
+    <string name="delete_selected_img_prompt">您确定删除该图片吗？</string>
+    <string name="delete_selected_video_prompt">您确定删除该视频吗？</string>
+    <string name="not_read_camera">无法使用摄像头拍照</string>
+    <string name="all_photo">所有图片</string>
+    <string name="app_not_read_camera">爱库存无法使用摄像头拍照,请先开启使用摄像头权限后再次尝试此功能。</string>
+    <string name="most_num">最多只能显示{0}张</string>
+    <string name="yulan">预览</string>
+    <string name="save_to_phone">保存到手机</string>
+    <string name="save_failed">保存失败</string>
+    <string name="save_success">保存成功</string>
+    <string name="quit_editing">退出此次编辑？</string>
+    <string name="publish">发布</string>
+    <string name="reply">评论</string>
+    <string name="praise">赞</string>
+    <string name="video">视频</string>
+    <string name="checkview">查看</string>
+    <string name="record_desc">长按录制, 抬起暂停</string>
+    <string name="dynamic_reply">回复</string>
+    <string name="delete_dynamic_dialog">确定删除这条评论？</string>
+    <string name="data_uploading">数据提交中...</string>
+    <string name="zip_video">视频压缩中...</string>
+    <string name="location">所在位置</string>
+    <string name="get_alytoken_error">获取视频认证失败</string>
+    <string name="uploading_video">视频上传中...</string>
+    <string name="upload_video_error">上传视频失败</string>
+    <string name="need_permission">请给予相应的权限</string>
+    <string name="video_permission">相机/录音</string>
+</resources>

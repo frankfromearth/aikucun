@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/space_15"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginRight="@dimen/space_15"
+        android:layout_marginTop="@dimen/global_padding"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/address_text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_dark"
+            android:text="111"
+            android:textSize="@dimen/text_size_normal_l" />
+
+
+        <TextView
+            android:id="@+id/address_text_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_toRightOf ="@+id/address_text_name"
+            android:textColor="@color/text_dark"
+            android:text="333"
+            android:textSize="@dimen/text_size_normal_l" />
+
+
+        <ImageView
+            android:id="@+id/img_check"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/check"/>
+
+        <TextView
+            android:id="@+id/address_text_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/space_4"
+            android:paddingRight="@dimen/space_4"
+            android:paddingTop="@dimen/space_1"
+            android:paddingBottom="@dimen/space_1"
+            android:layout_marginLeft="@dimen/space_15"
+            android:layout_toRightOf="@+id/address_text_mobile"
+            android:textColor="@color/color_accent"
+            android:text="@string/default_address"
+            android:visibility="gone"
+            android:background="@drawable/b_address_bg"
+            android:textSize="@dimen/text_size_tab" />
+
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/address_text_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_15"
+        android:paddingBottom="@dimen/space_10"
+        android:paddingTop="@dimen/space_5"
+        android:textColor="@color/text_normal"
+        android:textSize="@dimen/text_size_normal_s" />
+
+    <View style="@style/h_line"/>
+
+    <RelativeLayout
+        android:id="@+id/address_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_15">
+
+        <View style="@style/h_line" />
+        <include
+            android:id="@+id/address_default_btn"
+            layout="@layout/layout_default_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            >
+
+            <include
+                android:id="@+id/address_edit_btn"
+                layout="@layout/layout_edit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <include
+                android:id="@+id/address_del_btn"
+                layout="@layout/layout_del_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

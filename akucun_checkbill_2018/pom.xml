@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.0.RELEASE</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.akucun.checkbill</groupId>
+	<artifactId>checkbill-parent</artifactId>
+	<version>${akucun.checkbill.version}</version>
+	<packaging>pom</packaging>
+
+	<name>akucun checkbill parent</name>
+	<description>akucun checkbill parent project</description>
+
+	<modules>
+		<module>checkbill-facade</module>
+		<module>checkbill-common</module>
+		<module>checkbill-dao</module>
+		<module>checkbill-service</module>
+		<module>checkbill-biz</module>
+		<module>checkbill-integration</module>
+		<module>checkbill-launcher</module>
+	</modules>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+
+		<akucun.checkbill.version>0.0.1-SNAPSHOT</akucun.checkbill.version>
+
+		<!-- fastjson -->
+		<fastjson.version>1.2.46</fastjson.version>
+		<!-- javax扩展包 -->
+		<javax.version>3.0.1</javax.version>
+		<!-- mybatis通用mapper -->
+		<tkmybatis.version>1.1.0</tkmybatis.version>
+		<mybatis.version>1.3.0</mybatis.version>
+		<sfjson.version>2.4</sfjson.version>
+		<!-- 连接池 -->
+		<druid.version>1.0.19</druid.version>
+		<!-- dubbo -->
+		<dubbo.version>2.5.4</dubbo.version>
+		<zkclient.version>0.10</zkclient.version>
+		<version.commons.lang3>3.1</version.commons.lang3>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<!-- if not use spring boot parent
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>2.0.0.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		-->
+
+			<!-- javax扩展包 -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+			</dependency>
+
+
+
+			<!-- mybatis分页插件pagehelper
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper-spring-boot-starter</artifactId>
+				<version>${tkmybatis.version}</version>
+			</dependency>
+			  mybatis通用mapper
+                   <dependency>
+                       <groupId>tk.mybatis</groupId>
+                       <artifactId>mapper-spring-boot-starter</artifactId>
+                       <version>${tkmybatis.version}</version>
+                   </dependency>
+               -->
+			<!-- mybatis -->
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>net.sf.json-lib</groupId>
+				<artifactId>json-lib</artifactId>
+				<version>${sfjson.version}</version>
+				<classifier>jdk15</classifier>
+			</dependency>
+
+			<!-- 连接池 -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+
+			<!-- fastjson -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+
+			<!-- dubbo -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>${dubbo.version}</version>
+			</dependency>
+
+			<!-- zkclient -->
+			<dependency>
+				<groupId>com.101tec</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>${zkclient.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+    					<artifactId>slf4j-log4j2</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.zookeeper</groupId>
+				<artifactId>zookeeper</artifactId>
+				<version>3.4.8</version>
+				<exclusions>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-log4j12</artifactId>
+					</exclusion> 
+					
+				</exclusions>
+			</dependency>
+
+
+
+			<!-- aliyun:START -->
+			<dependency>
+				<groupId>com.aliyun.oss</groupId>
+				<artifactId>aliyun-sdk-oss</artifactId>
+				<version>2.7.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.aliyun</groupId>
+				<artifactId>aliyun-java-sdk-sts</artifactId>
+				<version>2.1.6</version>
+			</dependency>
+			<dependency>
+				<groupId>com.aliyun</groupId>
+				<artifactId>aliyun-java-sdk-ram</artifactId>
+				<version>2.0.7</version>
+			</dependency>
+			<dependency>
+				<groupId>com.aliyun</groupId>
+				<artifactId>aliyun-java-sdk-core</artifactId>
+				<version>2.3.7</version>
+			</dependency>
+			<dependency>
+				<groupId>com.aliyun</groupId>
+				<artifactId>aliyun-java-sdk-cdn</artifactId>
+				<version>2.3.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alipay</groupId>
+				<artifactId>alipay-sdk-java</artifactId>
+				<version>20170411150054</version>
+			</dependency>
+			<!-- aliyun:END -->
+			<!-- -腾讯云 -->
+			<dependency>
+				<groupId>com.qcloud</groupId>
+				<artifactId>vod_api</artifactId>
+				<version>1.1.1</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-log4j12</artifactId>
+					</exclusion> 
+				</exclusions>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${version.commons.lang3}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>2.6</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>3.17</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.45</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://192.168.120.2:8082/nexus/content/groups/public</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://192.168.120.2:8082/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

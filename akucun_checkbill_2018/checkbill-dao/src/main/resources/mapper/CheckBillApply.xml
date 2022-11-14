@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.akucun.checkbill.dao.mapper.CheckBillApplyMapper">
+
+  <insert id="insert"  parameterType="com.akucun.checkbill.dao.entity.CheckBillApplyEntity">
+
+      INSERT into sc_checkbillapplys(
+        id,`userid` , `userno` ,`finishtime` ,`username` ,`filename` ,`fileurl` ,`status` ,`paytotalamount` ,`canceltotalamount` ,`paytotalcount` ,`cancelTotalCount` ,`createtime`,typeCode,typeValue
+      )
+      VALUES(
+       #{id},#{userId} , #{userNo} ,#{finishTime} ,#{userName} ,#{fileName} ,#{fileUrl} ,#{status} ,#{payTotalAmount} ,#{cancelTotalAmount} ,#{payTotalCount} ,#{cancelTotalCount} ,#{createTime},#{typeCode},#{typeValue}
+      )
+  </insert>
+
+  <update id="updateById" parameterType="com.akucun.checkbill.dao.entity.CheckBillApplyEntity">
+    update   sc_checkbillapplys
+     set
+     <trim prefixOverrides=",">
+        <if test="finishTime != null"> ,finishtime = #{finishTime,jdbcType=TIMESTAMP} </if>
+        <if test="fileName != null"> ,filename= #{fileName} </if>
+        <if test="fileUrl != null"> ,fileurl = #{fileUrl} </if>
+        <if test="status != null"> ,status = #{status} </if>
+        <if test="payTotalAmount != null"> ,paytotalamount = #{payTotalAmount} </if>
+        <if test="cancelTotalAmount != null"> ,canceltotalamount = #{cancelTotalAmount} </if>
+        <if test="payTotalCount != null"> ,paytotalcount = #{payTotalCount} </if>
+        <if test="cancelTotalCount != null"> ,cancelTotalCount = #{cancelTotalCount} </if>
+     </trim>
+      WHERE id = #{id}
+  </update>
+  <!-- 
+  <select id="queryByPage" resultType="com.akucun.checkbill.dao.entity.CheckBillApplyEntity" parameterType="map">
+     select
+        `finishtime` ,`username`  ,`userno`,`filename` ,`fileurl` ,`status` ,`paytotalamount` ,`canceltotalamount` ,`paytotalcount` ,`cancelTotalCount` ,`createtime`,typeCode,typeValue
+     from sc_checkbillapplys
+     where userid=#{userId} 
+     order createTime desc
+     limit #{startRow} ,#{pageSize}
+  </select>
+ -->
+
+    <select id="query" resultType="com.akucun.checkbill.dao.entity.CheckBillApplyEntity" parameterType="com.akucun.checkbill.dao.entity.CheckBillApplyEntity">
+        select
+        `finishtime` ,`username` ,`userno`,`filename` ,`fileurl` ,`status` ,`paytotalamount` ,`canceltotalamount` ,`paytotalcount` ,`cancelTotalCount` ,`createtime`
+        from sc_checkbillapplys
+        where userid=#{userId}
+        and typeCode=#{typeCode}
+        and typeValue=#{typeValue}
+        and status=#{status}
+    </select>
+
+    <select id="queryExcelDataByDateRangePage" parameterType="map" resultType="com.akucun.checkbill.dao.detail.CheckBillMonthDetail">
+     select
+        o.dingdanID2 as orderId, -- 订单ID
+        o.dingdanshijian as createtime ,         -- 订单生成时间
+        o.payingtime as  payTime, -- 支付时间  FROM_UNIXTIME( o.jiesuanshijianshuzi)
+        round(o.shangpinjine/100,2) as productPrice, -- 商品金额  d.jiesuanjia o.shangpinjine
+        round(o.yunfeijine/100,2) as carriageFee, -- 运费金额
+        round(o.zongjine/100,2) as payPrice, -- 支付金额  o.zongjine  o.dingdanjine
+        o.shangpinjianshu as pieceNum , -- 商品件数
+	   CASE  o.zhifuzhuangtai
+           WHEN 0 THEN '待支付'
+           WHEN 1 THEN '开启支付'
+           WHEN 2 THEN '支付处理中'
+           WHEN 3 THEN '支付成功'
+           WHEN 4 THEN '支付失败'
+       END as payStatus, -- 支付状态
+       case o.jiesuanfangshi
+            when 1 then '支付宝'
+            when 2 then '微信'
+       end as payType, -- 支付方式
+       d.pinpai as brand, -- 品牌
+       case o.dingdanzhuangtai
+            when 0 then '待付款'
+            when 1 then '待发货'
+            when 2 then '已发货'
+            when 3 then '截单待发货'
+            when 4 then '用户取消'
+            when 5 then '系统取消'
+            when 6 then '用户取消(已支付)'
+       end as orderStatus, -- 订单状态
+        d.adorderid as deliveryOrderNo, --   配送订单号
+        d.beizhu as memo, -- 备注
+        d.miaoshu as  productDescription,-- 商品描述
+        d.chima as  size,-- 尺码
+        round(d.jiesuanjia/100,2) as  settlePrice,-- 结算价
+        case d.shangpinzhuangtai
+          when 0 then '未捞'
+          when 1 then '已捞或处理中'
+          when 2 then '已发货'
+          when 3 then '平台缺货未发货'
+          when 4 then '用户取消不发货'
+          when 5 then '用户取消需退货'
+          when 6 then '用户退货已收'
+          when 7 then '用户申诉漏发'
+          when 8 then '平台审核打回'
+          when 9 then '商品已补发'
+          when 10 then '漏发退款'
+          when 11 then '系统取消不发货'
+        end as  productStatus,-- 商品状态
+        case d.quxiaogoumai
+          when '0' then '正常购买'
+          when '1' then '用户已申请取消'
+          when '2' then '平台同意'
+        end as cancleBuy -- 取消购买
+        -- , p.paymentNo,
+        -- d.mingcheng as productName,
+        -- d.aftersalestatu as saleStatus,
+        from sc_order_detail d,sc_order o,sc_payment_order p
+        where d.dingdanID=o.dingdanID and p.orderNo=o.dingdanID
+        and  o.caigouzhe=#{userId}
+        and o.dingdanshijian > #{startDate}
+        and o.dingdanshijian &lt; #{endDate}
+        order by d.dingdanID
+        limit #{startRow} ,#{pageSize}
+    </select>
+
+  	<select id="queryExcelDataByDeliveryPage" parameterType="map" resultType="com.akucun.checkbill.dao.detail.CheckBillDeliveryDetail">
+     select
+       	-- 播货序号
+		d.productxuhao as productNo ,-- 商品编号
+		d.barcode ,					 -- 商品条码
+		d.mingcheng as productName ,-- 名称
+		d.chima as  size , 		 -- 尺码
+		d.yanse as color, 		  -- 颜色
+		d.cxiaoshoujia as sugestSalePrice , -- 建议销售价
+		d.jiesuanjia as platSalePrice , -- 平台销售价
+		1  as pieceNum , 				-- 数量     d.jianshu
+	    d.beizhu as memo, 				-- 备注
+		s.shouhuoren as receivePerson,	-- 收货人
+		s.lianxidianhua as receiveTel, -- 收货 联系电话
+		s.shouhuodizhi as receiveAddr, -- 收货地址
+		
+		
+		s.id as deliveryId,
+		case d.quxiaogoumai
+          when '0' then '正常购买'
+          when '1' then '用户已申请取消'
+          when '2' then '平台同意'
+        end as cancleBuy -- 取消购买
+        
+        from sc_order_detail d  ,sc_akucun_deliver_table s
+        where d.adid=s.id
+	        and  d.caigouzhe=#{userId}
+	       -- and d.adorderid = {deliveryOrderNo}
+	        and  s.id = #{deliveryOrderId}
+	        and
+	        <foreach collection="status" open="(" close=")" item="item" separator="or">
+	        	 d.shangpinzhuangtai = #{item}
+	        </foreach> 
+       	order by s.id
+        limit #{startRow} ,#{pageSize}
+    </select>
+    <select id="queryExcelDataByActivityPage" parameterType="map" resultType="com.akucun.checkbill.dao.detail.CheckBillActivityDetail">
+     select
+       	-- 播货序号
+		d.productxuhao as productNo ,-- 商品编号
+		d.barcode ,					 -- 商品条码
+		d.mingcheng as productName ,-- 名称
+		d.chima as  size , 		 -- 尺码
+		d.yanse as color, 		  -- 颜色
+		d.cxiaoshoujia as sugestSalePrice , -- 建议销售价
+		d.jiesuanjia as platSalePrice , -- 平台销售价
+		1  as pieceNum , 				-- 数量     d.jianshu
+	    d.beizhu as memo, 				-- 备注
+		s.shouhuoren as receivePerson,	-- 收货人
+		s.lianxidianhua as receiveTel, -- 收货 联系电话
+		s.shouhuodizhi as receiveAddr, -- 收货地址
+		
+		
+		s.id as deliveryId,
+		case d.quxiaogoumai
+          when '0' then '正常购买'
+          when '1' then '用户已申请取消'
+          when '2' then '平台同意'
+        end as cancleBuy -- 取消购买
+        
+        from sc_order_detail d  ,sc_akucun_deliver_table s
+        where d.adid=s.id
+	        and  d.caigouzhe=#{userId} 
+	        and  d.liveid = #{activityId}
+	        and
+	        <foreach collection="status" open="(" close=")" item="item" separator="or">
+	        	 d.shangpinzhuangtai = #{item}
+	        </foreach> 
+       	order by s.id
+        limit #{startRow} ,#{pageSize}
+    </select>
+    <select id="queryDeliveryById" parameterType="string" resultType="string">
+    	select adorderid
+    	from sc_akucun_deliver_table 
+    	where id=#{value}
+    </select>
+    <select id="queryDeliveryByNo" parameterType="string" resultType="string">
+        select id
+        from sc_akucun_deliver_table
+        where adorderid=#{value}
+    </select>
+
+
+    <select id="queryActivityById" parameterType="string" resultType="string">
+    	select liveno
+    	from sc_activity 
+    	where id=#{value}
+    </select>
+
+    <update id="updateDeliveryUrl" parameterType="map">
+        update sc_akucun_deliver_table
+        set downloadurl=#{url},downloadurltmp=#{url}
+        where caigouzhe=#{userId}
+         and adorderid=#{deliveryOrderNo}
+    </update>
+    <update id="updateActivityUrl" parameterType="map">
+        update sc_activity_order
+        set checksheeturl=#{url},statu=1,cscreatetime=now()
+        where userid=#{userId}
+        and liveid=#{activityId}
+    </update>
+</mapper>

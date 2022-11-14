@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_conversation"
+    android:padding="8dp" >
+
+    <ImageView
+        android:id="@+id/btn_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_arrow"
+        android:layout_centerVertical="true"
+        android:text="@string/jx_enter_group"
+        android:textColor="@color/white"
+        android:padding="7dp"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/tv_displayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="4dp"
+        android:layout_toLeftOf="@id/btn_enter"
+        android:singleLine="true"
+        android:textSize="@dimen/font_size_middle" />
+
+   <!--  <TextView
+        android:id="@+id/tv_mcsId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_displayName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_toLeftOf="@id/btn_enter"
+        android:singleLine="true"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/font_size_small" /> -->
+
+</RelativeLayout>

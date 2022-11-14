@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingRight="10dp">
+
+
+    <ImageView
+        android:id="@+id/logistics_status_iv"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="15dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_logistics_status_gray" />
+
+    <!--快件接收站点-->
+    <TextView
+        android:id="@+id/logistics_address_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/logistics_status_iv"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@id/logistics_status_iv"
+        android:autoLink="phone"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_size_normal" />
+
+    <!--快件接收时间-->
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/logistics_address_tv"
+        android:layout_below="@id/logistics_address_tv"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+    <!--分割线-->
+    <View
+        android:id="@+id/bottom_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignStart="@id/date_tv"
+        android:layout_below="@id/date_tv"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/layout_division_view" />
+
+    <View
+        android:id="@+id/empty_view"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/bottom_line_view"
+        android:layout_marginStart="10dp" />
+
+
+    <!--时间轴的竖线-->
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/empty_view"
+        android:layout_alignStart="@id/logistics_status_iv"
+        android:layout_below="@id/logistics_status_iv"
+        android:layout_marginStart="7dp"
+        android:background="@color/gray" />
+
+
+</RelativeLayout>

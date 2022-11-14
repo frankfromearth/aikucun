@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/color_tab_line" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_settings_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_address" />
+
+            <View
+                style="@style/h_line"
+                android:layout_marginTop="@dimen/global_padding" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/global_padding"
+                android:paddingRight="@dimen/global_padding">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/global_padding"
+                    android:orientation="horizontal">
+
+                    <com.aikucun.akapp.view.MultiImageView
+                        android:id="@+id/multiImagView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/contentTv"
+                        android:layout_toRightOf="@id/multiImagView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_8"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/text_size_small" />
+
+                </RelativeLayout>
+
+                <com.aikucun.akapp.view.SkuGridView
+                    android:id="@+id/skuGridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/global_padding"
+                    android:background="@drawable/sku_bg"
+                    android:cacheColorHint="#00000000"
+                    android:horizontalSpacing="@dimen/space_10"
+                    android:listSelector="#00000000"
+                    android:numColumns="auto_fit"
+                    android:padding="@dimen/space_10"
+                    android:scrollbars="none"
+                    android:verticalSpacing="@dimen/space_10" />
+
+                <TextView
+                    android:id="@+id/priceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingBottom="@dimen/space_15"
+                    android:paddingTop="@dimen/space_15"
+                    android:textColor="@color/color_accent"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/h_line"
+                android:layout_marginTop="@dimen/global_padding" />
+
+            <RelativeLayout
+                android:id="@+id/buy_option_remark"
+                style="@style/option_item">
+
+                <TextView
+                    android:id="@+id/buy_option_remark_title"
+                    style="@style/option_item_text_title"
+                    android:text="添加备注" />
+
+                <TextView
+                    android:id="@+id/buy_option_remark_text"
+                    style="@style/option_item_text_arrow_value"
+                    android:textColor="@color/color_accent"
+                    android:textSize="@dimen/text_size_button"
+                    android:textStyle="bold" />
+
+                <ImageView style="@style/option_item_arrow_img" />
+
+            </RelativeLayout>
+
+            <View style="@style/h_line" />
+
+            <Button
+                android:id="@+id/submit_button"
+                style="@style/button_common"
+                android:layout_marginLeft="@dimen/space_20"
+                android:layout_marginRight="@dimen/space_20"
+                android:layout_marginTop="@dimen/space_40"
+                android:background="@drawable/btn_bg_red_selector"
+                android:text="@string/submit_order" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

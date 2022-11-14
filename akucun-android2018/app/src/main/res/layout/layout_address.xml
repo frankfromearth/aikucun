@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginTop="@dimen/global_padding"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/address_text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal_l" />
+
+        <TextView
+            android:id="@+id/address_text_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_15"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal_l" />
+
+
+        <TextView
+            android:id="@+id/address_text_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/space_4"
+            android:paddingRight="@dimen/space_4"
+            android:paddingTop="@dimen/space_1"
+            android:paddingBottom="@dimen/space_1"
+            android:layout_marginLeft="@dimen/space_10"
+            android:layout_marginTop="-2dp"
+            android:layout_toRightOf="@+id/address_text_mobile"
+            android:textColor="@color/color_accent"
+            android:text="@string/default_address"
+            android:visibility="gone"
+            android:background="@drawable/b_address_bg"
+            android:textSize="8sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/address_text_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_15"
+        android:paddingBottom="@dimen/space_10"
+        android:paddingTop="@dimen/space_5"
+        android:textColor="@color/text_normal"
+        android:textSize="@dimen/text_size_normal_s" />
+
+
+    <RelativeLayout
+        android:id="@+id/address_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_15">
+
+        <View style="@style/h_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/space_5"
+            android:paddingTop="@dimen/space_8"
+            android:text="@string/receiving_address"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_size_small" />
+
+        <include
+            android:id="@+id/address_edit_btn"
+            layout="@layout/layout_edit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_marginTop="@dimen/space_5" />
+
+</LinearLayout>

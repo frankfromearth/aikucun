@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>com.akucun.checkbill</groupId>
+		<artifactId>checkbill-parent</artifactId>
+		<version>${akucun.checkbill.version}</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>checkbill-launcher</artifactId>
+	<!-- <packaging>jar</packaging> -->
+	  <packaging>war</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+	</properties>
+
+	<dependencies>
+
+
+		<dependency>
+			<groupId>com.akucun.checkbill</groupId>
+			<artifactId>checkbill-common</artifactId>
+			<version>${akucun.checkbill.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.akucun.checkbill</groupId>
+			<artifactId>checkbill-biz</artifactId>
+			<version>${akucun.checkbill.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.akucun.checkbill</groupId>
+			<artifactId>checkbill-service</artifactId>
+			<version>${akucun.checkbill.version}</version>
+		</dependency>
+
+		<!--	@ConfigurationProperties(prefix = "spring.druid")  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+
+
+		<!--	<dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j-impl</artifactId>
+                <version>2.11.0</version>
+            </dependency>-->
+
+ 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId> 
+			<exclusions>
+				<exclusion>
+					<artifactId>log4j-to-slf4j</artifactId>
+					<groupId>org.apache.logging.log4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency> 
+		 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+		
+	</dependencies>
+
+	<build>
+		<plugins>
+		 	<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		 
+		</plugins>
+
+	</build>
+
+
+</project>

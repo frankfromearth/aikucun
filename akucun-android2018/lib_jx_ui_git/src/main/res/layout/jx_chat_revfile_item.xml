@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jxccp.ui.widget.JXCheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/chat_bg"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp" >
+
+    <TextView
+        android:id="@+id/tv_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/jx_chat_tips_bg"
+        android:paddingBottom="2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="2dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_12sp"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/cb_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_timestamp"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:duplicateParentState="true"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <com.jxccp.ui.widget.JXCircleImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="@dimen/default_item_image"
+        android:layout_height="@dimen/default_item_image"
+        android:layout_below="@id/tv_timestamp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/cb_del"
+        android:duplicateParentState="true" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_timestamp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/iv_photo"
+        android:duplicateParentState="true"
+        android:singleLine="true"
+        android:textColor="@color/grey500"
+        android:textSize="@dimen/font_size_12sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_file_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_username"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/iv_photo"
+        android:background="@drawable/jx_bg_recv_message_container"
+        android:descendantFocusability="blocksDescendants"
+        android:padding="8dp" >
+
+        <TextView
+            android:id="@+id/tv_file_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:maxLines="2"
+            android:maxWidth="100dp"
+            android:minWidth="30dp"
+            android:text="textfile.txt" />
+
+        <TextView
+            android:id="@+id/tv_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_file_title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:text="20M"
+            android:textColor="@color/grey500"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/iv_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pb_file_download"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/jx_bg_download_file" />
+        
+        <ProgressBar
+            android:id="@+id/pb_file_download"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="7dp"
+            android:layout_toRightOf="@+id/tv_file_title"
+            android:indeterminateOnly="false"
+            android:max="100"
+            android:progressDrawable="@drawable/jx_bg_download_file_pb"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_download_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pb_file_download" 
+            android:textColor="#0ab6f2"
+            android:layout_marginLeft="8dp"
+            android:textSize="10sp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</com.jxccp.ui.widget.JXCheckableRelativeLayout>

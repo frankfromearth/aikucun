@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/my_order_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_5"
+        android:paddingLeft="@dimen/global_padding"
+        android:paddingRight="@dimen/global_padding"
+        android:paddingTop="@dimen/space_5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/my_orders"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_5"
+            android:text="@string/check_all"
+            android:textColor="@color/selector_normal_text"
+            android:textSize="@dimen/text_size_small" />
+
+        <ImageView
+            style="@style/option_item_arrow_img"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_marginLeft="@dimen/global_padding" />
+
+    <LinearLayout
+        android:id="@+id/all_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_20"
+        android:paddingTop="@dimen/global_padding">
+
+        <LinearLayout
+            android:id="@+id/order_daizhifu_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/order_paid_layout"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_unpaid" />
+
+                <TextView
+                    android:id="@+id/order_daizhifu_count"
+                    style="@style/unread_msg_bg"
+                    android:layout_gravity="right"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pending_payment"
+                android:textColor="@color/selector_normal_text"
+                android:textSize="@dimen/text_size_normal_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/order_daifahuo_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_paided" />
+
+                <TextView
+                    android:id="@+id/order_yizhifu_count"
+                    style="@style/unread_msg_bg"
+                    android:layout_gravity="right" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pending_shipment"
+                android:textColor="@color/selector_normal_text"
+                android:textSize="@dimen/text_size_normal_s" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/order_jianhuozhong_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_unshipped" />
+
+                <TextView
+                    android:id="@+id/order_jianhuozhong_count"
+                    style="@style/unread_msg_bg"
+                    android:layout_gravity="right" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/picking"
+                android:textColor="@color/selector_normal_text"
+                android:textSize="@dimen/text_size_normal_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/order_yifahuo_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_shipped" />
+
+                <TextView
+                    android:id="@+id/order_yifahuo_count"
+                    style="@style/unread_msg_bg"
+                    android:layout_gravity="right"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shipped"
+                android:textColor="@color/selector_normal_text"
+                android:textSize="@dimen/text_size_normal_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/order_cancel_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_canceled" />
+
+                <TextView
+                    android:id="@+id/order_cancel_count"
+                    style="@style/unread_msg_bg"
+                    android:layout_gravity="right" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/canceled"
+                android:textColor="@color/selector_normal_text"
+                android:textSize="@dimen/text_size_normal_s" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:text="@string/main_tab_activity_have_hand"
+        android:background="@color/color_bg_light"
+        android:textColor="@color/color_accent"
+        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/space_10"
+        android:paddingLeft="@dimen/space_15"
+        android:layout_height="wrap_content" />
+</LinearLayout>

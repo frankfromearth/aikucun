@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_light"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/color_tab_line" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/forward_img_layout"
+        style="@style/option_item">
+
+        <TextView
+            style="@style/option_item_text_title"
+            android:text="@string/forward_product_normal_selected" />
+
+        <ImageView
+            android:id="@+id/iv1"
+            style="@style/option_item_arrow_img" />
+
+        <TextView
+            android:id="@+id/choose_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv1"
+            android:text="sssss"
+            android:textColor="@color/color_accent"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/choose_img_reslut_intro"
+        style="@style/option_item_text_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/forward_product_normal_intro_more_img_no_text"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/space_12" />
+
+
+    <RelativeLayout
+        android:id="@+id/outstock_layout"
+        style="@style/option_item"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            style="@style/option_item_text_title"
+            android:text="@string/forward_product_outof_stock" />
+
+        <ImageView
+            android:id="@+id/iv2"
+            style="@style/option_item_arrow_img" />
+
+        <TextView
+            android:id="@+id/forward_out_of_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv2"
+            android:text="sssss"
+            android:textColor="@color/color_accent"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/outstock_intro"
+        style="@style/option_item_text_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/forward_product_outof_stock_intro"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/space_12" />
+
+
+    <RelativeLayout
+        android:id="@+id/forward_fare_layout"
+        style="@style/option_item"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            style="@style/option_item_text_title"
+            android:text="@string/forward_product_fare" />
+
+        <ImageView
+            android:id="@+id/iv3"
+            style="@style/option_item_arrow_img" />
+
+        <TextView
+            android:id="@+id/forward_fare_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv3"
+            android:text="+85元"
+            android:textColor="@color/color_accent"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fare_intro_tv"
+        style="@style/option_item_text_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/forward_product_fare_intro"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/space_12" />
+
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="@dimen/global_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/pinpai_icon"
+            android:layout_width="@dimen/space_20"
+            android:layout_height="@dimen/space_20"
+            android:layout_marginRight="@dimen/global_padding"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/pinpai_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pinpai_icon"
+            android:textColor="@color/text_link"
+            android:textSize="@dimen/text_size_normal_l" />
+
+        <ImageView style="@style/option_item_arrow_img" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/global_padding"
+        android:layout_marginTop="@dimen/global_padding">
+
+        <TextView
+            android:id="@+id/order_no_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/text_size_normal_s" />
+
+        <TextView
+            android:id="@+id/order_amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/text_size_normal_s" />
+
+    </RelativeLayout>
+
+    <View style="@style/h_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/space_10">
+
+        <TextView
+            android:id="@+id/order_status_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:lineSpacingExtra="@dimen/space_5"
+            android:layout_toLeftOf="@+id/actions_ll"
+            android:textSize="@dimen/text_size_normal_s" />
+
+
+        <RelativeLayout
+            android:id="@+id/ll_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_35"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/time_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/pending_payment"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:textColor="@color/selector_red_text"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/rl_outsaletime_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:textColor="@color/color_accent"
+                android:text="jfodjfjdo"
+                android:visibility="gone"
+                android:textSize="@dimen/text_size_normal"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <cn.iwgang.countdownview.CountdownView
+                android:id="@+id/countdown"
+                android:layout_toRightOf="@id/time_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                tools:isHideTimeBackground="false"
+                tools:isShowTimeBgDivisionLine="false"
+                android:layout_centerInParent="true"
+                tools:timeBgColor="@color/color_accent"
+                tools:isShowDay="false"
+                tools:timeBgRadius="2dp"
+                tools:isShowHour="true"
+                tools:isShowMinute="true"
+                tools:isShowSecond="true"
+                tools:isShowMillisecond="false"
+                tools:timeTextColor="@color/white"
+                tools:timeTextSize="14sp"
+                tools:isTimeTextBold="true"
+                tools:suffixGravity="center"
+                tools:suffixTextColor="@color/red"
+                tools:suffixTextSize="14sp"
+                tools:suffixDay="天"
+                tools:suffixHour=":"
+                tools:suffixMinute=":"
+                tools:suffixSecond=""  />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/actions_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/pay_btn"
+                style="@style/button_small"
+                android:background="@drawable/btn_bg_red_selector"
+                android:visibility="invisible"
+                android:layout_marginRight="@dimen/space_5"
+                android:text="@string/go_pay" />
+
+            <TextView
+                android:id="@+id/appley_scan_btn"
+                style="@style/button_small"
+                android:background="@drawable/btn_bg_red_selector"
+                android:layout_marginRight="@dimen/space_5"
+                android:visibility="gone"
+                android:text="@string/scan_code_sorting" />
+
+            <TextView
+                android:id="@+id/appley_bit_btn"
+                style="@style/button_small"
+                android:background="@drawable/btn_bg_red_selector"
+                android:visibility="gone"
+                android:text="@string/statement" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_toolbar"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/color_tab_line"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_settings_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!-- 消息通知
+                <RelativeLayout
+                    android:id="@+id/setting_option_message"
+                    style="@style/option_item">
+
+                    <TextView
+                        style="@style/option_item_text_title"
+                        android:text="消息通知" />
+
+                    <ImageView style="@style/option_item_arrow_img" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/h_line"
+                    android:layout_marginLeft="@dimen/space_15" /> -->
+
+                <!-- 同步商品数据 -->
+                <RelativeLayout
+                    android:id="@+id/setting_option_sync"
+                    style="@style/option_item">
+
+                    <TextView
+                        style="@style/option_item_text_title"
+                        android:text="@string/synchronous_commodity_data"/>
+
+                    <ImageView style="@style/option_item_arrow_img"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/h_line"
+                    android:layout_marginLeft="@dimen/space_15"/>
+
+                <!-- 清理缓存 -->
+                <RelativeLayout
+                    android:id="@+id/setting_option_cache"
+                    style="@style/option_item">
+
+                    <TextView
+                        style="@style/option_item_text_title"
+                        android:text="@string/cleaer_img_cache"/>
+
+                    <ImageView style="@style/option_item_arrow_img"/>
+                </RelativeLayout>
+
+
+
+                <View style="@style/h_line"/>
+            </LinearLayout>
+            <View
+                style="@style/h_line"
+                android:layout_marginTop="@dimen/space_20"/>
+            <RelativeLayout
+                android:id="@+id/forward_set_layout"
+                style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/forward_set"/>
+
+                <ImageView style="@style/option_item_arrow_img"/>
+            </RelativeLayout>
+            <View style="@style/h_line"/>
+
+            <!-- 下单备注开关 -->
+            <RelativeLayout
+                android:id="@+id/setting_option_remark"
+                style="@style/option_item">
+
+                <TextView
+                    style="@style/option_item_text_title"
+                    android:text="@string/single_memo_switch"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/order_switch_intro"
+                android:background="@color/color_bg_light"
+                android:textSize="@dimen/space_12"
+                android:paddingTop="5dp"
+                android:paddingBottom="@dimen/space_10"
+                android:paddingLeft="@dimen/space_15"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!-- 检查更新 -->
+                <RelativeLayout
+                    android:id="@+id/setting_option_update"
+                    style="@style/option_item">
+
+                    <TextView
+                        style="@style/option_item_text_title"
+                        android:text="@string/check_update"/>
+
+                    <ImageView style="@style/option_item_arrow_img"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/h_line"
+                    android:layout_marginLeft="@dimen/space_15"/>
+
+                <!-- 使用条款 -->
+                <RelativeLayout
+                    android:id="@+id/setting_option_term"
+                    style="@style/option_item">
+
+                    <TextView
+                        style="@style/option_item_text_title"
+                        android:text="@string/terms_of_use"/>
+
+                    <ImageView style="@style/option_item_arrow_img"/>
+                </RelativeLayout>
+
+                <View style="@style/h_line"/>
+
+                <!-- 关于我们 -->
+                <RelativeLayout
+                    android:id="@+id/setting_option_about"
+                    style="@style/option_item">
+
+                    <TextView
+                        style="@style/option_item_text_title"
+                        android:text="@string/about_us"/>
+
+                    <ImageView style="@style/option_item_arrow_img"/>
+                </RelativeLayout>
+
+                <View style="@style/h_line"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_light">
+
+
+                <Button
+                    android:id="@+id/exit_app_btn"
+                    style="@style/button_common"
+                    android:layout_marginBottom="@dimen/space_30"
+                    android:layout_marginLeft="@dimen/space_20"
+                    android:layout_marginRight="@dimen/space_20"
+                    android:layout_marginTop="@dimen/space_30"
+                    android:background="@drawable/btn_bg_red_selector"
+                    android:text="@string/exit_app"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

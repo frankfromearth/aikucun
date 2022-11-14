@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_accent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_center"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_logo_trans" />
+
+    <LinearLayout
+        android:id="@+id/start_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <cn.sucang.widget.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Normal.Circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/color_accent" />
+
+        <TextView
+            android:id="@+id/start_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/space_10"
+            android:textColor="@color/white"
+            android:text="@string/msg_text_loading"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_bind"
+            style="@style/button_common"
+            android:layout_marginLeft="@dimen/space_35"
+            android:layout_marginRight="@dimen/space_35"
+            android:layout_marginTop="@dimen/space_40"
+            android:text="@string/goto_bind"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/space_30"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/text_copyright2"
+        android:textSize="@dimen/text_size_small" />
+
+</RelativeLayout>

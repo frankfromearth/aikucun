@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        style="@style/h_line"
+        android:layout_marginTop="@dimen/global_padding" />
+
+    <!-- 商品金额 -->
+    <RelativeLayout
+        android:id="@+id/order_amount"
+        style="@style/option_item"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/order_title_amount"
+            style="@style/option_item_text_title"
+            android:text="@string/goods_amount" />
+
+        <TextView
+            android:id="@+id/order_value_amount"
+            style="@style/option_item_text_value"
+            android:textColor="@color/text_dark"
+            android:text="¥ --" />
+    </RelativeLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_marginLeft="@dimen/global_padding" />
+
+    <!-- 转发抵扣 -->
+    <RelativeLayout
+        android:id="@+id/order_dikou"
+        style="@style/option_item"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/order_title_dikou"
+            style="@style/option_item_text_title"
+            android:text="@string/youhui_tips" />
+
+        <TextView
+            android:id="@+id/order_value_dikou"
+            style="@style/option_item_text_value"
+            android:textColor="@color/text_dark"
+            android:text="¥ --" />
+    </RelativeLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_marginLeft="@dimen/global_padding" />
+
+    <!-- 运费 -->
+    <RelativeLayout
+        android:id="@+id/order_yunfei"
+        style="@style/option_item"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/order_title_yunfei"
+            style="@style/option_item_text_title"
+            android:text="@string/freight" />
+
+        <TextView
+            android:id="@+id/order_value_yunfei"
+            style="@style/option_item_text_value"
+            android:textColor="@color/text_dark"
+            android:text="¥ --" />
+    </RelativeLayout>
+
+    <View
+        style="@style/h_line" />
+
+</LinearLayout>
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/activities_in_progress"
+        android:textColor="@color/color_accent"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/space_35"
+        android:layout_marginBottom="@dimen/space_15"
+        android:layout_marginLeft="@dimen/space_10"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:id="@+id/brand_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical">
+    </LinearLayout>
+
+</LinearLayout>
